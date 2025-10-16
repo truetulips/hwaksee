@@ -1,0 +1,445 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_AT_RULE_IMPORT_0___ from "-!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[6].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[6].use[2]!./default.css";
+import ___CSS_LOADER_GET_URL_IMPORT___ from "../../node_modules/css-loader/dist/runtime/getUrl.js";
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL("../data/img/icon_n.png", import.meta.url);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+___CSS_LOADER_EXPORT___.i(___CSS_LOADER_AT_RULE_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `/* 공통 카드 스타일 */
+h2.Posts_tit__aSrlk {
+    font-size: 18px;
+    background-color: var(--tit-light);
+    padding: 5px 20px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 0.7rem auto;
+}
+
+.Posts_card__MiG4M {
+  position: relative; /* ✅ 삭제 버튼 위치 고정에 필수 */
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+  cursor: pointer;
+}
+
+.Posts_input__bGhbh {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.Posts_submit__gw4k6 {
+  background: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Posts_imagePreview__XiJ8h {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.Posts_image__uLm0Y {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.Posts_noImage__WwOw8 {
+  padding: 20px;
+  background: #eee;
+  border-radius: 4px;
+  color: #999;
+}
+
+/* 카드 내용 */
+.Posts_content__r5e5Y {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Posts_title__M8oP4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.Posts_description__A496M {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.Posts_price__nvq8w {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.Posts_link__ZMFyt {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* 버튼 영역 */
+.Posts_actions__XJDF0 {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.Posts_deleteBtn__KlOHr {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Posts_matched__4sZgC {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* PostList 그리드 */
+.Posts_grid__rgc\\+W {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+  gap: 10px;
+  padding: 10px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.Posts_empty__F\\+C03 {
+  padding: 40px;
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+}
+
+.Posts_matchBox__7H3gd {
+  padding: 0.5rem 0.7rem;
+}
+/* MyPosts 등록 버튼 */
+.Posts_registerBtn__FC-UV {
+  margin: 0 0.5rem 0.5rem 0.6rem;  
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.Posts_stats__\\+F6WP {
+  margin-bottom: 24px;
+  background: #f0f8ff;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.Posts_controls__9uucw {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.Posts_deleteButton__0YKSo {
+  position: absolute;
+  top: 0;
+  right: -8px;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #888;
+}
+
+.Posts_deleteButton__0YKSo:hover {
+  color: var(--color-notice);
+}
+
+.Posts_role__Z3Lzb {
+  font-size: 14px;
+  color: #555;
+}
+
+.Posts_small_noti__ltAgr {
+  font-size: 0.8rem;
+  color: var(--color-notice);
+  margin: 0.5rem 0 0 0;
+}
+
+.Posts_small_sub__Rqe33 {
+  font-size: 0.8rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.Posts_status__palDS {
+  font-size: 13px;
+  display: inline-block;
+  border: #7a7a7a 1px solid;
+  background: #e6e6e6;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  margin-top: 13px;
+}
+
+.Posts_debug__9mg39 {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 10px;
+  color: #ccc;
+}
+
+.Posts_noticeBox__Cxu2Q {
+  margin: 2rem 0;
+  padding: 0.3rem;
+  border: 0.1rem dashed var(--color-notice);
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  background-color: #ffefef;
+  list-style: none;
+}
+
+.Posts_noticeBox__Cxu2Q li::before {
+  content: '📌';
+  font-size: 12px;
+}
+
+.Posts_noticeBox__Cxu2Q .Posts_trans_fn__CDrnA {
+  color:#7a7a7a;
+  padding-left: 15px;
+}
+
+.Posts_notiBank__-dQWC {
+  width: 90px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Posts_completeBox__8KUrQ {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f0f9f0;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.Posts_backButton__-\\+GDx {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.Posts_success__p7cB8 {
+  color: green;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.Posts_error__EPHhm {
+  color: var(--color-notice);
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.Posts_descriptionBox__GIrIX {
+  margin: 0.5rem 0 0.5rem 1rem;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-left: 4px solid #ff6b6b;
+  font-size: 0.95rem;
+}
+
+/* 리스트 */
+.Posts_postT__HDxMD {
+  white-space: nowrap;         /* 줄바꿈 없이 한 줄로 */
+  overflow: hidden;            /* 넘치는 부분 숨김 */
+  text-overflow: ellipsis;     /* 넘치는 텍스트는 ... 처리 */
+}
+
+/* 뷰어 구성 */
+.Posts_matBox__-yj8N {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+}
+
+.Posts_matBox__-yj8N button {
+  height: fit-content;
+}
+
+.Posts_codeBox__Gqk0k {
+  margin: 0.7rem 0;
+  width: fit-content;
+}
+
+.Posts_feeNotice__ouBtd {
+  border-left: 4px solid var(--color-notice);
+  padding-left: 7px;
+}
+
+.Posts_buttom_controll__BtgkD {
+  margin-top: 20px;
+}
+
+/* ✅ 상태 텍스트 및 색상 결정 */
+.Posts_status__palDS {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.Posts_status__palDS.Posts_waiting__LgP\\+l {
+  color: #ab53de;
+}
+
+.Posts_status__palDS.Posts_matched__4sZgC {
+  color: #309325;
+}
+
+.Posts_status__palDS.Posts_active__jwMTG {
+  color: #309325;
+}
+
+.Posts_status__palDS.Posts_done__zyhFn {
+  color: #c48834;
+}
+
+/* 뒤로가기 아이콘 */
+.Posts_arrowLeft__2rRvd {
+  color: #fff;
+  position: relative;
+  margin: 8px 5px 0 0 ;
+  width: 16px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.Posts_arrowLeft__2rRvd:before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  transform: rotate(-135deg);
+}
+
+/* 매칭버튼 */
+.Posts_matchButton__3JP8W {
+  color: #fff;
+  position: relative;
+  margin-left: 3px;
+  margin-top: 8px;
+  width: 7px;
+  height: 1px;
+  background-color: currentColor;
+  transform: rotate(-45deg);
+}
+
+.Posts_matchButton__3JP8W:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -7px;
+  width: 8px;
+  height: 5px;
+  border-radius: 2px;
+  border: solid 1px currentColor;
+}
+
+.Posts_matchButton__3JP8W:after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -7px;
+  width: 8px;
+  height: 5px;
+  border-radius: 2px;
+  border: solid 1px currentColor;
+}
+
+a.Posts_confirmBtn__xIClK {
+  padding-left: 30px;
+  background: #00de5a url(${___CSS_LOADER_URL_REPLACEMENT_0___}) no-repeat;
+  background-size: 20px 20px;
+  background-position: 8px 6px;
+}`, "",{"version":3,"sources":["webpack://./src/css/Posts.module.css"],"names":[],"mappings":"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","sourcesContent":["@import './default.css';\r\n\r\n/* 공통 카드 스타일 */\r\nh2.tit {\r\n    font-size: 18px;\r\n    background-color: var(--tit-light);\r\n    padding: 5px 20px;\r\n    border-radius: 20px;\r\n    width: fit-content;\r\n    margin: 0.7rem auto;\r\n}\r\n\r\n.card {\r\n  position: relative; /* ✅ 삭제 버튼 위치 고정에 필수 */\r\n  padding: 16px;\r\n  border: 1px solid #ccc;\r\n  border-radius: 8px;\r\n  background: #fff;\r\n  font-size: 0.9rem;\r\n  line-height: 1.6rem;\r\n  cursor: pointer;\r\n}\r\n\r\n.input {\r\n  display: block;\r\n  width: 100%;\r\n  margin-bottom: 12px;\r\n  padding: 8px;\r\n  border: 1px solid #ccc;\r\n  border-radius: 4px;\r\n}\r\n\r\n.submit {\r\n  background: #007bff;\r\n  color: white;\r\n  padding: 10px 16px;\r\n  border: none;\r\n  border-radius: 4px;\r\n  cursor: pointer;\r\n}\r\n\r\n.imagePreview {\r\n  margin-bottom: 12px;\r\n  text-align: center;\r\n}\r\n\r\n.image {\r\n  max-width: 100%;\r\n  height: auto;\r\n  border-radius: 4px;\r\n}\r\n\r\n.noImage {\r\n  padding: 20px;\r\n  background: #eee;\r\n  border-radius: 4px;\r\n  color: #999;\r\n}\r\n\r\n/* 카드 내용 */\r\n.content {\r\n  flex: 1;\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 8px;\r\n}\r\n\r\n.title {\r\n  font-size: 18px;\r\n  font-weight: bold;\r\n  margin: 0;\r\n}\r\n\r\n.description {\r\n  font-size: 14px;\r\n  color: #555;\r\n  margin: 0;\r\n}\r\n\r\n.price {\r\n  font-size: 15px;\r\n  font-weight: bold;\r\n  color: #333;\r\n}\r\n\r\n.link {\r\n  font-size: 14px;\r\n  color: #007bff;\r\n  text-decoration: none;\r\n}\r\n\r\n/* 버튼 영역 */\r\n.actions {\r\n  display: flex;\r\n  gap: 0.7rem;\r\n  margin-top: 0.7rem;\r\n  margin-bottom: 0.7rem;\r\n}\r\n\r\n.deleteBtn {\r\n  padding: 6px 12px;\r\n  background-color: #dc3545;\r\n  color: #fff;\r\n  border: none;\r\n  border-radius: 4px;\r\n  cursor: pointer;\r\n}\r\n\r\n.matched {\r\n  color: #28a745;\r\n  font-weight: bold;\r\n}\r\n\r\n/* PostList 그리드 */\r\n.grid {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));\r\n  gap: 10px;\r\n  padding: 10px;\r\n  max-height: 80vh;\r\n  overflow-y: auto;\r\n}\r\n\r\n.empty {\r\n  padding: 40px;\r\n  text-align: center;\r\n  color: #999;\r\n  font-size: 16px;\r\n}\r\n\r\n.matchBox {\r\n  padding: 0.5rem 0.7rem;\r\n}\r\n/* MyPosts 등록 버튼 */\r\n.registerBtn {\r\n  margin: 0 0.5rem 0.5rem 0.6rem;  \r\n  background-color: #007bff;\r\n  color: white;\r\n  border: none;\r\n  border-radius: 6px;\r\n  cursor: pointer;\r\n}\r\n\r\n.stats {\r\n  margin-bottom: 24px;\r\n  background: #f0f8ff;\r\n  padding: 16px;\r\n  border-radius: 8px;\r\n}\r\n\r\n.controls {\r\n  display: flex;\r\n  gap: 12px;\r\n  margin-bottom: 16px;\r\n}\r\n\r\n.deleteButton {\r\n  position: absolute;\r\n  top: 0;\r\n  right: -8px;\r\n  background: transparent;\r\n  border: none;\r\n  font-size: 14px;\r\n  cursor: pointer;\r\n  color: #888;\r\n}\r\n\r\n.deleteButton:hover {\r\n  color: var(--color-notice);\r\n}\r\n\r\n.role {\r\n  font-size: 14px;\r\n  color: #555;\r\n}\r\n\r\n.small_noti {\r\n  font-size: 0.8rem;\r\n  color: var(--color-notice);\r\n  margin: 0.5rem 0 0 0;\r\n}\r\n\r\n.small_sub {\r\n  font-size: 0.8rem;\r\n  margin: 0 0 0.5rem 0;\r\n}\r\n\r\n.status {\r\n  font-size: 13px;\r\n  display: inline-block;\r\n  border: #7a7a7a 1px solid;\r\n  background: #e6e6e6;\r\n  border-radius: 0.3rem;\r\n  padding: 0.2rem 0.5rem;\r\n  margin-top: 13px;\r\n}\r\n\r\n.debug {\r\n  position: absolute;\r\n  top: 8px;\r\n  right: 8px;\r\n  font-size: 10px;\r\n  color: #ccc;\r\n}\r\n\r\n.noticeBox {\r\n  margin: 2rem 0;\r\n  padding: 0.3rem;\r\n  border: 0.1rem dashed var(--color-notice);\r\n  border-radius: 0.3rem;\r\n  font-size: 0.9rem;\r\n  background-color: #ffefef;\r\n  list-style: none;\r\n}\r\n\r\n.noticeBox li::before {\r\n  content: '📌';\r\n  font-size: 12px;\r\n}\r\n\r\n.noticeBox .trans_fn {\r\n  color:#7a7a7a;\r\n  padding-left: 15px;\r\n}\r\n\r\n.notiBank {\r\n  width: 90px;\r\n  display: inline-block;\r\n  vertical-align: middle;\r\n}\r\n\r\n.completeBox {\r\n  text-align: center;\r\n  padding: 40px 20px;\r\n  background-color: #f0f9f0;\r\n  border-radius: 12px;\r\n  margin-top: 20px;\r\n}\r\n\r\n.backButton {\r\n  margin-top: 20px;\r\n  padding: 10px 20px;\r\n  font-size: 16px;\r\n  background-color: #2ecc71;\r\n  color: white;\r\n  border: none;\r\n  border-radius: 8px;\r\n  cursor: pointer;\r\n}\r\n\r\n.success {\r\n  color: green;\r\n  font-weight: bold;\r\n  margin-top: 8px;\r\n}\r\n\r\n.error {\r\n  color: var(--color-notice);\r\n  font-weight: bold;\r\n  margin-top: 8px;\r\n}\r\n\r\n.descriptionBox {\r\n  margin: 0.5rem 0 0.5rem 1rem;\r\n  padding: 8px;\r\n  background-color: #f9f9f9;\r\n  border-left: 4px solid #ff6b6b;\r\n  font-size: 0.95rem;\r\n}\r\n\r\n/* 리스트 */\r\n.postT {\r\n  white-space: nowrap;         /* 줄바꿈 없이 한 줄로 */\r\n  overflow: hidden;            /* 넘치는 부분 숨김 */\r\n  text-overflow: ellipsis;     /* 넘치는 텍스트는 ... 처리 */\r\n}\r\n\r\n/* 뷰어 구성 */\r\n.matBox {\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 0;\r\n  gap: 10px;\r\n}\r\n\r\n.matBox button {\r\n  height: fit-content;\r\n}\r\n\r\n.codeBox {\r\n  margin: 0.7rem 0;\r\n  width: fit-content;\r\n}\r\n\r\n.feeNotice {\r\n  border-left: 4px solid var(--color-notice);\r\n  padding-left: 7px;\r\n}\r\n\r\n.buttom_controll {\r\n  margin-top: 20px;\r\n}\r\n\r\n/* ✅ 상태 텍스트 및 색상 결정 */\r\n.status {\r\n  font-weight: bold;\r\n  margin-top: 8px;\r\n}\r\n\r\n.status.waiting {\r\n  color: #ab53de;\r\n}\r\n\r\n.status.matched {\r\n  color: #309325;\r\n}\r\n\r\n.status.active {\r\n  color: #309325;\r\n}\r\n\r\n.status.done {\r\n  color: #c48834;\r\n}\r\n\r\n/* 뒤로가기 아이콘 */\r\n.arrowLeft {\r\n  color: #fff;\r\n  position: relative;\r\n  margin: 8px 5px 0 0 ;\r\n  width: 16px;\r\n  height: 1px;\r\n  background-color: currentColor;\r\n}\r\n\r\n.arrowLeft:before {\r\n  content: '';\r\n  position: absolute;\r\n  left: 1px;\r\n  top: -5px;\r\n  width: 10px;\r\n  height: 10px;\r\n  border-top: solid 1px currentColor;\r\n  border-right: solid 1px currentColor;\r\n  transform: rotate(-135deg);\r\n}\r\n\r\n/* 매칭버튼 */\r\n.matchButton {\r\n  color: #fff;\r\n  position: relative;\r\n  margin-left: 3px;\r\n  margin-top: 8px;\r\n  width: 7px;\r\n  height: 1px;\r\n  background-color: currentColor;\r\n  transform: rotate(-45deg);\r\n}\r\n\r\n.matchButton:before {\r\n  content: '';\r\n  position: absolute;\r\n  top: -3px;\r\n  left: -7px;\r\n  width: 8px;\r\n  height: 5px;\r\n  border-radius: 2px;\r\n  border: solid 1px currentColor;\r\n}\r\n\r\n.matchButton:after {\r\n  content: '';\r\n  position: absolute;\r\n  top: -3px;\r\n  right: -7px;\r\n  width: 8px;\r\n  height: 5px;\r\n  border-radius: 2px;\r\n  border: solid 1px currentColor;\r\n}\r\n\r\na.confirmBtn {\r\n  padding-left: 30px;\r\n  background: #00de5a url(../data/img/icon_n.png) no-repeat;\r\n  background-size: 20px 20px;\r\n  background-position: 8px 6px;\r\n}"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"tit": `Posts_tit__aSrlk`,
+	"card": `Posts_card__MiG4M`,
+	"input": `Posts_input__bGhbh`,
+	"submit": `Posts_submit__gw4k6`,
+	"imagePreview": `Posts_imagePreview__XiJ8h`,
+	"image": `Posts_image__uLm0Y`,
+	"noImage": `Posts_noImage__WwOw8`,
+	"content": `Posts_content__r5e5Y`,
+	"title": `Posts_title__M8oP4`,
+	"description": `Posts_description__A496M`,
+	"price": `Posts_price__nvq8w`,
+	"link": `Posts_link__ZMFyt`,
+	"actions": `Posts_actions__XJDF0`,
+	"deleteBtn": `Posts_deleteBtn__KlOHr`,
+	"matched": `Posts_matched__4sZgC`,
+	"grid": `Posts_grid__rgc+W`,
+	"empty": `Posts_empty__F+C03`,
+	"matchBox": `Posts_matchBox__7H3gd`,
+	"registerBtn": `Posts_registerBtn__FC-UV`,
+	"stats": `Posts_stats__+F6WP`,
+	"controls": `Posts_controls__9uucw`,
+	"deleteButton": `Posts_deleteButton__0YKSo`,
+	"role": `Posts_role__Z3Lzb`,
+	"small_noti": `Posts_small_noti__ltAgr`,
+	"small_sub": `Posts_small_sub__Rqe33`,
+	"status": `Posts_status__palDS`,
+	"debug": `Posts_debug__9mg39`,
+	"noticeBox": `Posts_noticeBox__Cxu2Q`,
+	"trans_fn": `Posts_trans_fn__CDrnA`,
+	"notiBank": `Posts_notiBank__-dQWC`,
+	"completeBox": `Posts_completeBox__8KUrQ`,
+	"backButton": `Posts_backButton__-+GDx`,
+	"success": `Posts_success__p7cB8`,
+	"error": `Posts_error__EPHhm`,
+	"descriptionBox": `Posts_descriptionBox__GIrIX`,
+	"postT": `Posts_postT__HDxMD`,
+	"matBox": `Posts_matBox__-yj8N`,
+	"codeBox": `Posts_codeBox__Gqk0k`,
+	"feeNotice": `Posts_feeNotice__ouBtd`,
+	"buttom_controll": `Posts_buttom_controll__BtgkD`,
+	"waiting": `Posts_waiting__LgP+l`,
+	"active": `Posts_active__jwMTG`,
+	"done": `Posts_done__zyhFn`,
+	"arrowLeft": `Posts_arrowLeft__2rRvd`,
+	"matchButton": `Posts_matchButton__3JP8W`,
+	"confirmBtn": `Posts_confirmBtn__xIClK`
+};
+export default ___CSS_LOADER_EXPORT___;

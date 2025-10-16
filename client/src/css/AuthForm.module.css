@@ -1,0 +1,71 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_AT_RULE_IMPORT_0___ from "-!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[6].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[6].use[2]!./default.css";
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+___CSS_LOADER_EXPORT___.i(___CSS_LOADER_AT_RULE_IMPORT_0___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `h2 {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.AuthForm_regFormbox__ABcs1 {
+  margin: 0.5rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+
+.AuthForm_form__YBdPl {
+  max-width: var(--wd-mobile);
+  margin: auto;  
+  gap: 20px;
+}
+
+.AuthForm_valid__w4LZY {
+  border: 2px solid #4caf50;
+}
+
+.AuthForm_invalid__-IXzr {
+  border: 2px solid #f44336;
+}
+
+.AuthForm_warn__AsHH4 {
+  color: #f44336;
+  font-size: 0.9em;
+}
+
+.AuthForm_passwordBox__QpwL\\+ {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.AuthForm_passwordBox__QpwL\\+ input {
+  flex: 1 1;
+}
+
+.AuthForm_passwordBox__QpwL\\+ button {
+  padding: 4px 8px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+`, "",{"version":3,"sources":["webpack://./src/css/AuthForm.module.css"],"names":[],"mappings":"AAEA;EACE,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,qBAAqB;EACrB,sBAAsB;EACtB,kBAAkB;EAClB,gBAAgB;EAChB,eAAe;EACf,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,2BAA2B;EAC3B,YAAY;EACZ,SAAS;AACX;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE,cAAc;EACd,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,QAAQ;AACV;;AAEA;EACE,SAAO;AACT;;AAEA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,eAAe;AACjB","sourcesContent":["@import './default.css';\r\n\r\nh2 {\r\n  margin-top: 24px;\r\n  text-align: center;\r\n}\r\n\r\n.regFormbox {\r\n  margin: 0.5rem 0.7rem;\r\n  border: 1px solid #ccc;\r\n  border-radius: 8px;\r\n  background: #fff;\r\n  padding: 0.7rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\ninput {\r\n  margin-bottom: 1rem;\r\n}\r\n\r\n.form {\r\n  max-width: var(--wd-mobile);\r\n  margin: auto;  \r\n  gap: 20px;\r\n}\r\n\r\n.valid {\r\n  border: 2px solid #4caf50;\r\n}\r\n\r\n.invalid {\r\n  border: 2px solid #f44336;\r\n}\r\n\r\n.warn {\r\n  color: #f44336;\r\n  font-size: 0.9em;\r\n}\r\n\r\n.passwordBox {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 8px;\r\n}\r\n\r\n.passwordBox input {\r\n  flex: 1;\r\n}\r\n\r\n.passwordBox button {\r\n  padding: 4px 8px;\r\n  font-size: 0.9em;\r\n  cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"regFormbox": `AuthForm_regFormbox__ABcs1`,
+	"form": `AuthForm_form__YBdPl`,
+	"valid": `AuthForm_valid__w4LZY`,
+	"invalid": `AuthForm_invalid__-IXzr`,
+	"warn": `AuthForm_warn__AsHH4`,
+	"passwordBox": `AuthForm_passwordBox__QpwL+`
+};
+export default ___CSS_LOADER_EXPORT___;

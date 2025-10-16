@@ -1,0 +1,46 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../node_modules/css-loader/dist/runtime/api.js";
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.footer {
+    background-color: #222;
+    color: #eee;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 10px;
+
+}
+
+.footer-links p {
+    color: #aaa;
+}
+
+.footer-content a {
+    color: #aaa;
+    font-weight: 100;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    color: #000;
+}`, "",{"version":3,"sources":["webpack://./src/css/Footer.css"],"names":[],"mappings":"AAAA;IACI,sBAAsB;IACtB,WAAW;IACX,cAAc;IACd,kBAAkB;IAClB,eAAe;AACnB;;AAEA;IACI,gBAAgB;IAChB,cAAc;IACd,aAAa;IACb,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,gBAAgB;IAChB,aAAa;IACb,8BAA8B;IAC9B,WAAW;;AAEf;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,WAAW;IACX,gBAAgB;IAChB,eAAe;IACf,qBAAqB;AACzB;;AAEA;IACI,WAAW;AACf","sourcesContent":[".footer {\r\n    background-color: #222;\r\n    color: #eee;\r\n    padding: 5px 0;\r\n    text-align: center;\r\n    font-size: 12px;\r\n}\r\n\r\n.footer-content {\r\n    max-width: 960px;\r\n    margin: 0 auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n}\r\n\r\n.footer-links {\r\n    margin-top: 10px;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    gap: 0 10px;\r\n\r\n}\r\n\r\n.footer-links p {\r\n    color: #aaa;\r\n}\r\n\r\n.footer-content a {\r\n    color: #aaa;\r\n    font-weight: 100;\r\n    font-size: 12px;\r\n    text-decoration: none;\r\n}\r\n\r\n.footer-content a:hover {\r\n    color: #000;\r\n}"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {};
+export default ___CSS_LOADER_EXPORT___;

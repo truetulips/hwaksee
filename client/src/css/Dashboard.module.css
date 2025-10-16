@@ -1,0 +1,153 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_AT_RULE_IMPORT_0___ from "-!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[6].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[6].use[2]!./default.css";
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+___CSS_LOADER_EXPORT___.i(___CSS_LOADER_AT_RULE_IMPORT_0___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `h2.Dashboard_tit__X03El {
+    font-size: 18px;
+    background-color: var(--tit-light);
+    padding: 5px 20px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 0.7rem auto;
+}
+
+.Dashboard_dashboard__QLF2L {
+  background-color: var(--bg-retro);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.Dashboard_card__GL4vE {
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--hover-retro);
+  border-radius: 6px;
+}
+
+.Dashboard_title__el5ir {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.Dashboard_input__zHpPo {
+  padding: 8px;
+  border: 1px solid var(--hover-retro);
+  border-radius: 4px;
+}
+
+.Dashboard_buttonGroup__mX9gP {
+  margin-top: 0.5rem;
+}
+
+.Dashboard_matchRow__VjHGx {
+  border-bottom: 1px solid var(--hover-retro);
+  padding: 0.5rem 0;
+}
+
+.Dashboard_success__1oN7I {
+  color: green;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.Dashboard_statsBox__DtvXt {
+  margin: 30px;
+}
+
+.Dashboard_statsList__O7bJ- {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  
+  gap: 5px 10px;
+}
+
+.Dashboard_statsList__O7bJ- li {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+}
+
+.Dashboard_filterGroup__vkPWy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* list 스타일 */
+.Dashboard_listContainer__IHdmH {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.Dashboard_listRowHeader__n5Pq1,
+.Dashboard_listRow__h4pAu {
+  display: grid;
+  grid-template-columns: 30px 1.3fr 1fr 1fr;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: var(--bg-content);
+  border: 1px solid var(--hover-retro);
+  border-radius: 4px;
+}
+
+.Dashboard_listRowHeader__n5Pq1 {
+  font-weight: bold;
+  background-color: var(--hover-retro);
+}
+
+.Dashboard_clickable__6RU5v {
+  cursor: pointer;
+  color: var(--accent-retro);
+  text-decoration: underline;
+}
+
+.Dashboard_list_title__jnlgT {
+  text-align: center;
+}
+
+.Dashboard_list_tt__gBLah {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Dashboard_list_td__z00iB {
+  text-align: center;
+}
+
+.Dashboard_pagination__VwDOV {
+  text-align: center;
+  margin: 0.5rem 0.2rem 0.2rem;
+}`, "",{"version":3,"sources":["webpack://./src/css/Dashboard.module.css"],"names":[],"mappings":"AAEA;IACI,eAAe;IACf,kCAAkC;IAClC,iBAAiB;IACjB,mBAAmB;IACnB,kBAAkB;IAClB,mBAAmB;AACvB;;AAEA;EACE,iCAAiC;EACjC,aAAa;EACb,kBAAkB;AACpB;;AAEA;EACE,uBAAuB;EACvB,aAAa;EACb,mBAAmB;EACnB,oCAAoC;EACpC,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;EACjB,iBAAiB;EACjB,qBAAqB;AACvB;;AAEA;EACE,YAAY;EACZ,oCAAoC;EACpC,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,2CAA2C;EAC3C,iBAAiB;AACnB;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;AAClB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,kBAAkB;EAClB,aAAa;EACb,kCAAkC;EAClC,aAAa;AACf;;AAEA;EACE,qBAAqB;EACrB,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,eAAe;EACf,WAAW;EACX,kBAAkB;AACpB;;AAEA,aAAa;AACb;EACE,aAAa;EACb,sBAAsB;EACtB,WAAW;EACX,kBAAkB;AACpB;;AAEA;;EAEE,aAAa;EACb,yCAAyC;EACzC,mBAAmB;EACnB,eAAe;EACf,mCAAmC;EACnC,oCAAoC;EACpC,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;EACjB,oCAAoC;AACtC;;AAEA;EACE,eAAe;EACf,0BAA0B;EAC1B,0BAA0B;AAC5B;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,mBAAmB;EACnB,gBAAgB;EAChB,uBAAuB;AACzB;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,4BAA4B;AAC9B","sourcesContent":["@import './default.css';\r\n\r\nh2.tit {\r\n    font-size: 18px;\r\n    background-color: var(--tit-light);\r\n    padding: 5px 20px;\r\n    border-radius: 20px;\r\n    width: fit-content;\r\n    margin: 0.7rem auto;\r\n}\r\n\r\n.dashboard {\r\n  background-color: var(--bg-retro);\r\n  padding: 1rem;\r\n  border-radius: 8px;\r\n}\r\n\r\n.card {\r\n  background-color: white;\r\n  padding: 1rem;\r\n  margin-bottom: 1rem;\r\n  border: 1px solid var(--hover-retro);\r\n  border-radius: 6px;\r\n}\r\n\r\n.title {\r\n  font-size: 1.2rem;\r\n  font-weight: bold;\r\n  margin-bottom: 0.5rem;\r\n}\r\n\r\n.input {\r\n  padding: 8px;\r\n  border: 1px solid var(--hover-retro);\r\n  border-radius: 4px;\r\n}\r\n\r\n.buttonGroup {\r\n  margin-top: 0.5rem;\r\n}\r\n\r\n.matchRow {\r\n  border-bottom: 1px solid var(--hover-retro);\r\n  padding: 0.5rem 0;\r\n}\r\n\r\n.success {\r\n  color: green;\r\n  font-weight: bold;\r\n  margin-top: 1rem;\r\n}\r\n\r\n.statsBox {\r\n  margin: 30px;\r\n}\r\n\r\n.statsList {\r\n  list-style: none;\r\n  padding-left: 0;\r\n  margin-top: 0.5rem;\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr 1fr;  \r\n  gap: 5px 10px;\r\n}\r\n\r\n.statsList li {\r\n  margin-bottom: 0.4rem;\r\n  font-size: 1rem;\r\n}\r\n\r\n.filterGroup {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  gap: 0.5rem;\r\n  margin-top: 0.5rem;\r\n}\r\n\r\n/* list 스타일 */\r\n.listContainer {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 0.5rem;\r\n  margin-top: 0.5rem;\r\n}\r\n\r\n.listRowHeader,\r\n.listRow {\r\n  display: grid;\r\n  grid-template-columns: 30px 1.3fr 1fr 1fr;\r\n  align-items: center;\r\n  padding: 0.5rem;\r\n  background-color: var(--bg-content);\r\n  border: 1px solid var(--hover-retro);\r\n  border-radius: 4px;\r\n}\r\n\r\n.listRowHeader {\r\n  font-weight: bold;\r\n  background-color: var(--hover-retro);\r\n}\r\n\r\n.clickable {\r\n  cursor: pointer;\r\n  color: var(--accent-retro);\r\n  text-decoration: underline;\r\n}\r\n\r\n.list_title {\r\n  text-align: center;\r\n}\r\n\r\n.list_tt {\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n.list_td {\r\n  text-align: center;\r\n}\r\n\r\n.pagination {\r\n  text-align: center;\r\n  margin: 0.5rem 0.2rem 0.2rem;\r\n}"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"tit": `Dashboard_tit__X03El`,
+	"dashboard": `Dashboard_dashboard__QLF2L`,
+	"card": `Dashboard_card__GL4vE`,
+	"title": `Dashboard_title__el5ir`,
+	"input": `Dashboard_input__zHpPo`,
+	"buttonGroup": `Dashboard_buttonGroup__mX9gP`,
+	"matchRow": `Dashboard_matchRow__VjHGx`,
+	"success": `Dashboard_success__1oN7I`,
+	"statsBox": `Dashboard_statsBox__DtvXt`,
+	"statsList": `Dashboard_statsList__O7bJ-`,
+	"filterGroup": `Dashboard_filterGroup__vkPWy`,
+	"listContainer": `Dashboard_listContainer__IHdmH`,
+	"listRowHeader": `Dashboard_listRowHeader__n5Pq1`,
+	"listRow": `Dashboard_listRow__h4pAu`,
+	"clickable": `Dashboard_clickable__6RU5v`,
+	"list_title": `Dashboard_list_title__jnlgT`,
+	"list_tt": `Dashboard_list_tt__gBLah`,
+	"list_td": `Dashboard_list_td__z00iB`,
+	"pagination": `Dashboard_pagination__VwDOV`
+};
+export default ___CSS_LOADER_EXPORT___;

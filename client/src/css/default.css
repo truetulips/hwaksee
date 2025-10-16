@@ -1,0 +1,52 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../node_modules/css-loader/dist/runtime/api.js";
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `/* @import url('./nanumgothic.css'); */
+
+:root {
+  --font-retro: 'Nanum Gothic', sans-serif;
+  --font-size-base: 16px;
+  --bg-header: #643f0a;
+  --bg-retro: #fdf6e3;
+  --bg-content: #fffbf1 ;
+  --accent-retro: #3c3c3c;
+  --hover-retro: #d4cfc4;
+  --color-notice: #900d0d;
+  --color-point: #3376ff;
+  --tit-light: #fbeba6;
+  --wd-mobile: 400px;
+}
+
+/* 기본 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 전체 배경 및 폰트 */
+body {
+  font-family: var(--font-retro);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: #333;
+  background-color: var(--bg-retro);
+}
+
+section {
+  padding: 0 0.7rem 5rem;
+}
+
+button {  
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+label {
+  margin-right: 0.5rem;
+}`, "",{"version":3,"sources":["webpack://./src/css/default.css"],"names":[],"mappings":"AAAA,sCAAsC;;AAEtC;EACE,wCAAwC;EACxC,sBAAsB;EACtB,oBAAoB;EACpB,mBAAmB;EACnB,sBAAsB;EACtB,uBAAuB;EACvB,sBAAsB;EACtB,uBAAuB;EACvB,sBAAsB;EACtB,oBAAoB;EACpB,kBAAkB;AACpB;;AAEA,UAAU;AACV;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;;AAEA,eAAe;AACf;EACE,8BAA8B;EAC9B,gCAAgC;EAChC,gBAAgB;EAChB,WAAW;EACX,iCAAiC;AACnC;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,kBAAkB;EAClB,SAAS;AACX;;AAEA;EACE,oBAAoB;AACtB","sourcesContent":["/* @import url('./nanumgothic.css'); */\r\n\r\n:root {\r\n  --font-retro: 'Nanum Gothic', sans-serif;\r\n  --font-size-base: 16px;\r\n  --bg-header: #643f0a;\r\n  --bg-retro: #fdf6e3;\r\n  --bg-content: #fffbf1 ;\r\n  --accent-retro: #3c3c3c;\r\n  --hover-retro: #d4cfc4;\r\n  --color-notice: #900d0d;\r\n  --color-point: #3376ff;\r\n  --tit-light: #fbeba6;\r\n  --wd-mobile: 400px;\r\n}\r\n\r\n/* 기본 리셋 */\r\n* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\n/* 전체 배경 및 폰트 */\r\nbody {\r\n  font-family: var(--font-retro);\r\n  font-size: var(--font-size-base);\r\n  line-height: 1.6;\r\n  color: #333;\r\n  background-color: var(--bg-retro);\r\n}\r\n\r\nsection {\r\n  padding: 0 0.7rem 5rem;\r\n}\r\n\r\nbutton {  \r\n  padding: 10px 20px;\r\n  gap: 10px;\r\n}\r\n\r\nlabel {\r\n  margin-right: 0.5rem;\r\n}"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {};
+export default ___CSS_LOADER_EXPORT___;

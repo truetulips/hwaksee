@@ -1,7 +1,7 @@
 module.exports = {
     apps: [{
         name: 'hwaksee-prod',
-        script: 'server/server.prod.js',
+        script: './server.prod.js',
         env: {
         NODE_ENV: 'production',
 <<<<<<< HEAD

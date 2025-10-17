@@ -28,3 +28,4 @@ server/*.log
 # 기타
 *.local
 *.cache
+hwaksee.pub

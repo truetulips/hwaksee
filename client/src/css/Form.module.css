@@ -47,8 +47,12 @@
 .Form_input {
 =======
 .input {
+<<<<<<< HEAD
 >>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   width: 300px;
+=======
+  width: 100%;
+>>>>>>> 9e785ec4 (no message)
   padding: 10px 14px;
   font-size: 16px;
   border: 1px solid #ccc;

@@ -1,18 +1,4 @@
 const express = require('express');
-<<<<<<< HEAD
-const cors = require('cors');
-const mongoose = require('mongoose');
-require('dotenv').config();
-
-const app = express();
-app.use(cors());
-app.use(express.json());
-
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
-
-app.use('/api/posts', require('./routes/posts'));
-app.use('/api/user', require('./routes/user'));
-=======
 const path = require('path');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -45,18 +31,12 @@ app.use('/api/admin/stats', require('./routes/adminStats'));
 
 // ✅ React 정적 파일 서빙
 app.use(express.static(path.join(__dirname, '../client/build')));
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-<<<<<<< HEAD
-app.listen(process.env.PORT || 8001, () => {
-    console.log('Server running');
-=======
 // ✅ 서버 시작
 app.listen(PORT, () => {
     console.log(`🚀 확씨 배포 서버 실행 중: http://localhost:${PORT}`);
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
 });

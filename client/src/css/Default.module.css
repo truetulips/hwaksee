@@ -1,10 +1,21 @@
+<<<<<<< HEAD
 /* 왼쪽: 홈 버튼 */
 .Default_left {
+=======
+@import './default.css';
+
+/* 왼쪽: 홈 버튼 */
+.left {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   flex: 0 0 auto;
 }
 
 /* 가운데: 타이틀 */
+<<<<<<< HEAD
 .Default_center {
+=======
+.center {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -14,19 +25,31 @@
 }
 
 /* 오른쪽: 로그인/회원가입 또는 로그아웃/계정삭제 */
+<<<<<<< HEAD
 .Default_right {
+=======
+.right {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: flex;
   gap: 12px;
   flex: 0 0 auto;
 }
 
 /* 메인 소개 영역 */
+<<<<<<< HEAD
 .Default_main {
+=======
+.main {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   text-align: center;
 }
 
 /* 시작하기 버튼 영역 */
+<<<<<<< HEAD
 .Default_start {
+=======
+.start {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   margin-top: 24px;
   display: flex;
   gap: 16px;
@@ -45,7 +68,11 @@ button {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .Default_mainButton {
+=======
+.mainButton {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-family: inherit;
   font-size: 14px;
   padding: 8px 12px;
@@ -57,7 +84,11 @@ button {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .Default_mainButton:hover {
+=======
+.mainButton:hover {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   background-color: var(--bg-retro);
   color: var(--bg-header);
   border: 1px solid var(--bg-header);
@@ -100,7 +131,11 @@ i {
   float: left;
   margin: 0 10px 0 5px;
 }
+<<<<<<< HEAD
 .Default_logIn {
+=======
+.logIn {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   box-sizing: border-box;
   position: relative;
   display: block;
@@ -109,13 +144,21 @@ i {
   border: 1px solid;
   border-left: 0;  
 }
+<<<<<<< HEAD
 .Default_logIn::after, .Default_logIn::before {
+=======
+.logIn::after, .logIn::before {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   content: "";
   display: block;
   box-sizing: border-box;
   position: absolute;
 }
+<<<<<<< HEAD
 .Default_logIn::after {
+=======
+.logIn::after {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   border-top: 2px solid;
   border-right: 2px solid;
   border-radius: 2px;
@@ -125,7 +168,11 @@ i {
   left: -3px;
   top: 3px;
 }
+<<<<<<< HEAD
 .Default_logIn::before {
+=======
+.logIn::before {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   width: 10px;
   height: 1px;
   background: currentColor;
@@ -134,7 +181,11 @@ i {
 }
 
 /* 회원가입 */
+<<<<<<< HEAD
 .Default_userAdd {
+=======
+.userAdd {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: block;
   transform: scale(1);
   box-sizing: border-box;
@@ -142,21 +193,33 @@ i {
   height: 18px;
   background: linear-gradient(to left, currentColor 8px, transparent 0) no-repeat 14px 6px/6px 2px, linear-gradient(to left, currentColor 8px, transparent 0) no-repeat 16px 4px/2px 6px;
 }
+<<<<<<< HEAD
 .Default_userAdd::after, .Default_userAdd::before {
+=======
+.userAdd::after, .userAdd::before {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   content: "";
   display: block;
   box-sizing: border-box;
   position: absolute;
   border: 1px solid;
 }
+<<<<<<< HEAD
 .Default_userAdd::before {
+=======
+.userAdd::before {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   width: 7px;
   height: 7px;
   border-radius: 50%;
   top: 0;
   left: 4.5px;
 }
+<<<<<<< HEAD
 .Default_userAdd::after {
+=======
+.userAdd::after {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   width: 16px;
   height: 7px;
   border-top-left-radius: 50%;
@@ -165,13 +228,22 @@ i {
 }
 
 /* 푸터처리 */
+<<<<<<< HEAD
 .Default_layoutwrapper {
+=======
+.layoutwrapper {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+<<<<<<< HEAD
 .Default_mainContent {
   flex: 1 1;
+=======
+.mainContent {
+  flex: 1;
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   padding: 20px;
 }

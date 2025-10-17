@@ -1,9 +1,18 @@
+<<<<<<< HEAD
+=======
+@import './default.css';
+
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
 h2 {
   margin-top: 24px;
   text-align: center;
 }
 
+<<<<<<< HEAD
 .AuthForm_regFormbox {
+=======
+.regFormbox {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   margin: 0.5rem 0.7rem;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -17,12 +26,17 @@ input {
   margin-bottom: 1rem;
 }
 
+<<<<<<< HEAD
 .AuthForm_form {
+=======
+.form {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   max-width: var(--wd-mobile);
   margin: auto;  
   gap: 20px;
 }
 
+<<<<<<< HEAD
 .AuthForm_valid {
   border: 2px solid #4caf50;
 }
@@ -32,16 +46,32 @@ input {
 }
 
 .AuthForm_warn {
+=======
+.valid {
+  border: 2px solid #4caf50;
+}
+
+.invalid {
+  border: 2px solid #f44336;
+}
+
+.warn {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   color: #f44336;
   font-size: 0.9em;
 }
 
+<<<<<<< HEAD
 .AuthForm_passwordBox {
+=======
+.passwordBox {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+<<<<<<< HEAD
 .AuthForm_passwordBox input {
   flex: 1 1;
 }
@@ -51,3 +81,14 @@ input {
   font-size: 0.9em;
   cursor: pointer;
 }
+=======
+.passwordBox input {
+  flex: 1;
+}
+
+.passwordBox button {
+  padding: 4px 8px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)

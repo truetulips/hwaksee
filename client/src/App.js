@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+// App.js
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
 import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from './api/axios';

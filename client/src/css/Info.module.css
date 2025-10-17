@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 .Info_container {
+=======
+@import './default.css';
+
+.container {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     display: grid;
     gap: 25px;
     justify-items: center;
@@ -8,7 +14,11 @@ h3 {
     margin: 0.7rem auto;    
 }
 
+<<<<<<< HEAD
 h3.Info_tit {
+=======
+h3.tit {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     font-size: 18px;
     background-color: var(--tit-light);
     padding: 5px 20px;
@@ -16,17 +26,29 @@ h3.Info_tit {
 }
 
 /* 소개페이지 */
+<<<<<<< HEAD
 .Info_info p {
     text-align: center;
 }
 
 .Info_info p span {
+=======
+.info p {
+    text-align: center;
+}
+
+.info p span {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     color: var(--color-point);
     font-weight: bold;
     position: relative;
 }
 
+<<<<<<< HEAD
 .Info_info p span::after {
+=======
+.info p span::after {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     content: '';
     position: absolute;
     display: inline-block;
@@ -37,7 +59,11 @@ h3.Info_tit {
     background-color: currentColor
 }
 
+<<<<<<< HEAD
 .Info_beforeSunrise {
+=======
+.beforeSunrise {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     margin-top: 50px;  
     font-size: 18px;
     background-color: var(--tit-light);
@@ -45,7 +71,11 @@ h3.Info_tit {
     border-radius: 20px;  
 }
 
+<<<<<<< HEAD
 .Info_riseInfo {
+=======
+.riseInfo {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     max-width: 800px;
     list-style: none;
     text-align: left;
@@ -53,11 +83,19 @@ h3.Info_tit {
     gap: 20px;
 }
 
+<<<<<<< HEAD
 .Info_riseInfo em {
     color: #888;
 }
 
 .Info_riseInfo li {
+=======
+.riseInfo em {
+    color: #888;
+}
+
+.riseInfo li {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     padding: 0.7rem;
     border-bottom: 1px solid #ccc;
     border-right: 1px solid #ccc;
@@ -65,7 +103,11 @@ h3.Info_tit {
     box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
+<<<<<<< HEAD
 .Info_riseInfo li::before {
+=======
+.riseInfo li::before {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     content: '■';
     font-size: 0.5rem;
     position: relative;
@@ -75,7 +117,11 @@ h3.Info_tit {
 }
 
 /* 프로세스 */
+<<<<<<< HEAD
 .Info_process {
+=======
+.process {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     list-style: none;
     margin-top: 20px;
     display: grid;
@@ -83,7 +129,11 @@ h3.Info_tit {
     gap: 40px 50px;
 }
 
+<<<<<<< HEAD
 .Info_process li {
+=======
+.process li {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     padding: 16px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -91,12 +141,20 @@ h3.Info_tit {
     height: fit-content;
 }
 
+<<<<<<< HEAD
 .Info_process li:nth-child(odd) {
+=======
+.process li:nth-child(odd) {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     grid-column: 1;
     transform: translatey(-20px);
 }
 
+<<<<<<< HEAD
 .Info_process li:nth-child(odd)::before {
+=======
+.process li:nth-child(odd)::before {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     content: '';
     display: block;
     position: absolute;
@@ -108,7 +166,11 @@ h3.Info_tit {
     bottom: 15px;
 }
 
+<<<<<<< HEAD
 .Info_process li:nth-child(odd)::after {
+=======
+.process li:nth-child(odd)::after {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     content: '';
     display: block;
     position: absolute;
@@ -121,12 +183,20 @@ h3.Info_tit {
     bottom: 10px;
 }
 
+<<<<<<< HEAD
 .Info_process li:nth-child(even) {
+=======
+.process li:nth-child(even) {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     grid-column: 2;
     transform: translatey(50px);
 }
 
+<<<<<<< HEAD
 .Info_process li:nth-child(even)::before {
+=======
+.process li:nth-child(even)::before {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     content: '';
     display: block;
     position: absolute;
@@ -138,7 +208,11 @@ h3.Info_tit {
     bottom: 16px;
 }
 
+<<<<<<< HEAD
 .Info_process li:nth-child(even)::after {
+=======
+.process li:nth-child(even)::after {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     content: '';
     display: block;
     position: absolute;
@@ -151,24 +225,44 @@ h3.Info_tit {
     bottom: 10px;
 }
 
+<<<<<<< HEAD
 .Info_process li:nth-child(even):last-child::before, .Info_process li:nth-child(even):last-child::after {
     display: none;
 }
 
 .Info_process dt {
+=======
+.process li:nth-child(even):last-child::before, .process li:nth-child(even):last-child::after {
+    display: none;
+}
+
+.process dt {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     font-weight: bold;
     color: var(--color-point);
 }
 
+<<<<<<< HEAD
 .Info_process dd {
+=======
+.process dd {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     font-size: 0.8rem;
     margin-top: 10px;
 }
 
+<<<<<<< HEAD
 .Info_process li:first-child {
     background-color: #ccc;
 }
 
 .Info_process li:first-child dt {
+=======
+.process li:first-child {
+    background-color: #ccc;
+}
+
+.process li:first-child dt {
+>>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     color: black;
 }

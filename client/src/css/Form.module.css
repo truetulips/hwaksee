@@ -1,12 +1,5 @@
-// Imports
-import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../node_modules/css-loader/dist/runtime/sourceMaps.js";
-import ___CSS_LOADER_API_IMPORT___ from "../../node_modules/css-loader/dist/runtime/api.js";
-import ___CSS_LOADER_AT_RULE_IMPORT_0___ from "-!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[6].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[6].use[2]!./default.css";
-var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
-___CSS_LOADER_EXPORT___.i(___CSS_LOADER_AT_RULE_IMPORT_0___);
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, `/* 전체 폼 컨테이너 */
-.Form_container__\\+MsXn {
+/* 전체 폼 컨테이너 */
+.Form_container {
   max-width: var(--wd-mobile);
   margin: 40px auto;
   padding: 24px;
@@ -15,7 +8,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* 전체 폼 컨테이너 */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.Form_regFormbox__B25\\+0 {
+.Form_regFormbox {
   margin: 0.5rem 0.7rem;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -27,7 +20,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* 전체 폼 컨테이너 */
 }
 
 /* 폼 내부 */
-.Form_form__IK3uH {
+.Form_form {
   max-width: var(--wd-mobile);
   margin: 0.7rem auto;
   padding: 0.7rem;
@@ -35,7 +28,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* 전체 폼 컨테이너 */
 }
 
 /* 입력 필드 */
-.Form_input__jbLqp {
+.Form_input {
   width: 300px;
   padding: 10px 14px;
   font-size: 16px;
@@ -45,13 +38,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* 전체 폼 컨테이너 */
   margin: auto;
 }
 
-.Form_input__jbLqp:focus {
+.Form_input:focus {
   border-color: #007bff;
   outline: none;
 }
 
 /* 제출 버튼 */
-.Form_submit__hrXxK {
+.Form_submit {
   padding: 12px;
   background-color: #007bff;
   color: white;
@@ -62,12 +55,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* 전체 폼 컨테이너 */
   transition: background-color 0.2s ease;
 }
 
-.Form_submit__hrXxK:hover {
+.Form_submit:hover {
   background-color: #0056b3;
 }
 
 /* 비밀번호 보기 토글 버튼 */
-.Form_toggle__rgQDL {
+.Form_toggle {
   background: none;
   border: none;
   color: #007bff;
@@ -78,33 +71,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* 전체 폼 컨테이너 */
 }
 
 /* 에러 메시지 */
-.Form_error__h62BX {
+.Form_error {
   color: #dc3545;
   font-size: 14px;
   margin-top: -8px;
 }
 
 /* 힌트 텍스트 */
-.Form_hint__kR2lI {
+.Form_hint {
   font-size: 13px;
   color: #666;
 }
 
 /* 비밀번호 일치 상태 */
-.Form_matchStatus__b9Rgo {
+.Form_matchStatus {
   font-size: 14px;
   font-weight: bold;
-}`, "",{"version":3,"sources":["webpack://./src/css/Form.module.css"],"names":[],"mappings":"AAEA,cAAc;AACd;EACE,2BAA2B;EAC3B,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,yCAAyC;AAC3C;;AAEA;EACE,qBAAqB;EACrB,sBAAsB;EACtB,kBAAkB;EAClB,gBAAgB;EAChB,eAAe;EACf,aAAa;EACb,sBAAsB;EACtB,SAAS;AACX;;AAEA,SAAS;AACT;EACE,2BAA2B;EAC3B,mBAAmB;EACnB,eAAe;EACf,kBAAkB;AACpB;;AAEA,UAAU;AACV;EACE,YAAY;EACZ,kBAAkB;EAClB,eAAe;EACf,sBAAsB;EACtB,kBAAkB;EAClB,kCAAkC;EAClC,YAAY;AACd;;AAEA;EACE,qBAAqB;EACrB,aAAa;AACf;;AAEA,UAAU;AACV;EACE,aAAa;EACb,yBAAyB;EACzB,YAAY;EACZ,iBAAiB;EACjB,YAAY;EACZ,kBAAkB;EAClB,eAAe;EACf,sCAAsC;AACxC;;AAEA;EACE,yBAAyB;AAC3B;;AAEA,kBAAkB;AAClB;EACE,gBAAgB;EAChB,YAAY;EACZ,cAAc;EACd,eAAe;EACf,eAAe;EACf,oBAAoB;EACpB,gBAAgB;AAClB;;AAEA,WAAW;AACX;EACE,cAAc;EACd,eAAe;EACf,gBAAgB;AAClB;;AAEA,WAAW;AACX;EACE,eAAe;EACf,WAAW;AACb;;AAEA,eAAe;AACf;EACE,eAAe;EACf,iBAAiB;AACnB","sourcesContent":["@import './default.css';\r\n\r\n/* 전체 폼 컨테이너 */\r\n.container {\r\n  max-width: var(--wd-mobile);\r\n  margin: 40px auto;\r\n  padding: 24px;\r\n  background-color: #fff;\r\n  border-radius: 12px;\r\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.regFormbox {\r\n  margin: 0.5rem 0.7rem;\r\n  border: 1px solid #ccc;\r\n  border-radius: 8px;\r\n  background: #fff;\r\n  padding: 0.7rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 20px;  \r\n}\r\n\r\n/* 폼 내부 */\r\n.form {\r\n  max-width: var(--wd-mobile);\r\n  margin: 0.7rem auto;\r\n  padding: 0.7rem;\r\n  text-align: center;\r\n}\r\n\r\n/* 입력 필드 */\r\n.input {\r\n  width: 300px;\r\n  padding: 10px 14px;\r\n  font-size: 16px;\r\n  border: 1px solid #ccc;\r\n  border-radius: 6px;\r\n  transition: border-color 0.2s ease;\r\n  margin: auto;\r\n}\r\n\r\n.input:focus {\r\n  border-color: #007bff;\r\n  outline: none;\r\n}\r\n\r\n/* 제출 버튼 */\r\n.submit {\r\n  padding: 12px;\r\n  background-color: #007bff;\r\n  color: white;\r\n  font-weight: bold;\r\n  border: none;\r\n  border-radius: 6px;\r\n  cursor: pointer;\r\n  transition: background-color 0.2s ease;\r\n}\r\n\r\n.submit:hover {\r\n  background-color: #0056b3;\r\n}\r\n\r\n/* 비밀번호 보기 토글 버튼 */\r\n.toggle {\r\n  background: none;\r\n  border: none;\r\n  color: #007bff;\r\n  font-size: 14px;\r\n  cursor: pointer;\r\n  align-self: flex-end;\r\n  margin-top: -8px;\r\n}\r\n\r\n/* 에러 메시지 */\r\n.error {\r\n  color: #dc3545;\r\n  font-size: 14px;\r\n  margin-top: -8px;\r\n}\r\n\r\n/* 힌트 텍스트 */\r\n.hint {\r\n  font-size: 13px;\r\n  color: #666;\r\n}\r\n\r\n/* 비밀번호 일치 상태 */\r\n.matchStatus {\r\n  font-size: 14px;\r\n  font-weight: bold;\r\n}"],"sourceRoot":""}]);
-// Exports
-___CSS_LOADER_EXPORT___.locals = {
-	"container": `Form_container__+MsXn`,
-	"regFormbox": `Form_regFormbox__B25+0`,
-	"form": `Form_form__IK3uH`,
-	"input": `Form_input__jbLqp`,
-	"submit": `Form_submit__hrXxK`,
-	"toggle": `Form_toggle__rgQDL`,
-	"error": `Form_error__h62BX`,
-	"hint": `Form_hint__kR2lI`,
-	"matchStatus": `Form_matchStatus__b9Rgo`
-};
-export default ___CSS_LOADER_EXPORT___;
+}

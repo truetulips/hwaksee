@@ -1,11 +1,4 @@
-// Imports
-import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../node_modules/css-loader/dist/runtime/sourceMaps.js";
-import ___CSS_LOADER_API_IMPORT___ from "../../node_modules/css-loader/dist/runtime/api.js";
-import ___CSS_LOADER_AT_RULE_IMPORT_0___ from "-!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[6].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[6].use[2]!./default.css";
-var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
-___CSS_LOADER_EXPORT___.i(___CSS_LOADER_AT_RULE_IMPORT_0___);
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, `.Info_container__Q34iG {
+.Info_container {
     display: grid;
     gap: 25px;
     justify-items: center;
@@ -15,7 +8,7 @@ h3 {
     margin: 0.7rem auto;    
 }
 
-h3.Info_tit__XqU37 {
+h3.Info_tit {
     font-size: 18px;
     background-color: var(--tit-light);
     padding: 5px 20px;
@@ -23,17 +16,17 @@ h3.Info_tit__XqU37 {
 }
 
 /* 소개페이지 */
-.Info_info__HxyzI p {
+.Info_info p {
     text-align: center;
 }
 
-.Info_info__HxyzI p span {
+.Info_info p span {
     color: var(--color-point);
     font-weight: bold;
     position: relative;
 }
 
-.Info_info__HxyzI p span::after {
+.Info_info p span::after {
     content: '';
     position: absolute;
     display: inline-block;
@@ -44,7 +37,7 @@ h3.Info_tit__XqU37 {
     background-color: currentColor
 }
 
-.Info_beforeSunrise__q1YRY {
+.Info_beforeSunrise {
     margin-top: 50px;  
     font-size: 18px;
     background-color: var(--tit-light);
@@ -52,7 +45,7 @@ h3.Info_tit__XqU37 {
     border-radius: 20px;  
 }
 
-.Info_riseInfo__aCx\\+9 {
+.Info_riseInfo {
     max-width: 800px;
     list-style: none;
     text-align: left;
@@ -60,11 +53,11 @@ h3.Info_tit__XqU37 {
     gap: 20px;
 }
 
-.Info_riseInfo__aCx\\+9 em {
+.Info_riseInfo em {
     color: #888;
 }
 
-.Info_riseInfo__aCx\\+9 li {
+.Info_riseInfo li {
     padding: 0.7rem;
     border-bottom: 1px solid #ccc;
     border-right: 1px solid #ccc;
@@ -72,7 +65,7 @@ h3.Info_tit__XqU37 {
     box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.Info_riseInfo__aCx\\+9 li::before {
+.Info_riseInfo li::before {
     content: '■';
     font-size: 0.5rem;
     position: relative;
@@ -82,7 +75,7 @@ h3.Info_tit__XqU37 {
 }
 
 /* 프로세스 */
-.Info_process__S-zEX {
+.Info_process {
     list-style: none;
     margin-top: 20px;
     display: grid;
@@ -90,7 +83,7 @@ h3.Info_tit__XqU37 {
     gap: 40px 50px;
 }
 
-.Info_process__S-zEX li {
+.Info_process li {
     padding: 16px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -98,12 +91,12 @@ h3.Info_tit__XqU37 {
     height: fit-content;
 }
 
-.Info_process__S-zEX li:nth-child(odd) {
+.Info_process li:nth-child(odd) {
     grid-column: 1;
     transform: translatey(-20px);
 }
 
-.Info_process__S-zEX li:nth-child(odd)::before {
+.Info_process li:nth-child(odd)::before {
     content: '';
     display: block;
     position: absolute;
@@ -115,7 +108,7 @@ h3.Info_tit__XqU37 {
     bottom: 15px;
 }
 
-.Info_process__S-zEX li:nth-child(odd)::after {
+.Info_process li:nth-child(odd)::after {
     content: '';
     display: block;
     position: absolute;
@@ -128,12 +121,12 @@ h3.Info_tit__XqU37 {
     bottom: 10px;
 }
 
-.Info_process__S-zEX li:nth-child(even) {
+.Info_process li:nth-child(even) {
     grid-column: 2;
     transform: translatey(50px);
 }
 
-.Info_process__S-zEX li:nth-child(even)::before {
+.Info_process li:nth-child(even)::before {
     content: '';
     display: block;
     position: absolute;
@@ -145,7 +138,7 @@ h3.Info_tit__XqU37 {
     bottom: 16px;
 }
 
-.Info_process__S-zEX li:nth-child(even)::after {
+.Info_process li:nth-child(even)::after {
     content: '';
     display: block;
     position: absolute;
@@ -158,34 +151,24 @@ h3.Info_tit__XqU37 {
     bottom: 10px;
 }
 
-.Info_process__S-zEX li:nth-child(even):last-child::before, .Info_process__S-zEX li:nth-child(even):last-child::after {
+.Info_process li:nth-child(even):last-child::before, .Info_process li:nth-child(even):last-child::after {
     display: none;
 }
 
-.Info_process__S-zEX dt {
+.Info_process dt {
     font-weight: bold;
     color: var(--color-point);
 }
 
-.Info_process__S-zEX dd {
+.Info_process dd {
     font-size: 0.8rem;
     margin-top: 10px;
 }
 
-.Info_process__S-zEX li:first-child {
+.Info_process li:first-child {
     background-color: #ccc;
 }
 
-.Info_process__S-zEX li:first-child dt {
+.Info_process li:first-child dt {
     color: black;
-}`, "",{"version":3,"sources":["webpack://./src/css/Info.module.css"],"names":[],"mappings":"AAEA;IACI,aAAa;IACb,SAAS;IACT,qBAAqB;AACzB;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,eAAe;IACf,kCAAkC;IAClC,iBAAiB;IACjB,mBAAmB;AACvB;;AAEA,UAAU;AACV;IACI,kBAAkB;AACtB;;AAEA;IACI,yBAAyB;IACzB,iBAAiB;IACjB,kBAAkB;AACtB;;AAEA;IACI,WAAW;IACX,kBAAkB;IAClB,qBAAqB;IACrB,OAAO;IACP,YAAY;IACZ,WAAW;IACX,WAAW;IACX;AACJ;;AAEA;IACI,gBAAgB;IAChB,eAAe;IACf,kCAAkC;IAClC,iBAAiB;IACjB,mBAAmB;AACvB;;AAEA;IACI,gBAAgB;IAChB,gBAAgB;IAChB,gBAAgB;IAChB,aAAa;IACb,SAAS;AACb;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,eAAe;IACf,6BAA6B;IAC7B,4BAA4B;IAC5B,kCAAkC;IAClC,8CAA8C;AAClD;;AAEA;IACI,YAAY;IACZ,iBAAiB;IACjB,kBAAkB;IAClB,SAAS;IACT,oBAAoB;IACpB,0BAA0B;AAC9B;;AAEA,SAAS;AACT;IACI,gBAAgB;IAChB,gBAAgB;IAChB,aAAa;IACb,8BAA8B;IAC9B,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,kBAAkB;IAClB,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,cAAc;IACd,4BAA4B;AAChC;;AAEA;IACI,WAAW;IACX,cAAc;IACd,kBAAkB;IAClB,WAAW;IACX,WAAW;IACX,qCAAqC;IACrC,wBAAwB;IACxB,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,WAAW;IACX,cAAc;IACd,kBAAkB;IAClB,UAAU;IACV,WAAW;IACX,yCAAyC;IACzC,2CAA2C;IAC3C,wBAAwB;IACxB,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,cAAc;IACd,2BAA2B;AAC/B;;AAEA;IACI,WAAW;IACX,cAAc;IACd,kBAAkB;IAClB,WAAW;IACX,WAAW;IACX,qCAAqC;IACrC,yBAAyB;IACzB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,WAAW;IACX,cAAc;IACd,kBAAkB;IAClB,UAAU;IACV,WAAW;IACX,yCAAyC;IACzC,2CAA2C;IAC3C,yBAAyB;IACzB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,iBAAiB;IACjB,yBAAyB;AAC7B;;AAEA;IACI,iBAAiB;IACjB,gBAAgB;AACpB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,YAAY;AAChB","sourcesContent":["@import './default.css';\r\n\r\n.container {\r\n    display: grid;\r\n    gap: 25px;\r\n    justify-items: center;\r\n}\r\n\r\nh3 {\r\n    margin: 0.7rem auto;    \r\n}\r\n\r\nh3.tit {\r\n    font-size: 18px;\r\n    background-color: var(--tit-light);\r\n    padding: 5px 20px;\r\n    border-radius: 20px;\r\n}\r\n\r\n/* 소개페이지 */\r\n.info p {\r\n    text-align: center;\r\n}\r\n\r\n.info p span {\r\n    color: var(--color-point);\r\n    font-weight: bold;\r\n    position: relative;\r\n}\r\n\r\n.info p span::after {\r\n    content: '';\r\n    position: absolute;\r\n    display: inline-block;\r\n    left: 0;\r\n    bottom: -1px;\r\n    width: 100%;\r\n    height: 2px;\r\n    background-color: currentColor\r\n}\r\n\r\n.beforeSunrise {\r\n    margin-top: 50px;  \r\n    font-size: 18px;\r\n    background-color: var(--tit-light);\r\n    padding: 5px 20px;\r\n    border-radius: 20px;  \r\n}\r\n\r\n.riseInfo {\r\n    max-width: 800px;\r\n    list-style: none;\r\n    text-align: left;\r\n    display: grid;\r\n    gap: 20px;\r\n}\r\n\r\n.riseInfo em {\r\n    color: #888;\r\n}\r\n\r\n.riseInfo li {\r\n    padding: 0.7rem;\r\n    border-bottom: 1px solid #ccc;\r\n    border-right: 1px solid #ccc;\r\n    border-bottom-right-radius: 0.5rem;\r\n    box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.riseInfo li::before {\r\n    content: '■';\r\n    font-size: 0.5rem;\r\n    position: relative;\r\n    top: -3px;\r\n    margin-right: 0.3rem;\r\n    color: var(--color-notice);\r\n}\r\n\r\n/* 프로세스 */\r\n.process {\r\n    list-style: none;\r\n    margin-top: 20px;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;  \r\n    gap: 40px 50px;\r\n}\r\n\r\n.process li {\r\n    padding: 16px;\r\n    border: 1px solid #ccc;\r\n    border-radius: 8px;\r\n    background-color: #fff;\r\n    height: fit-content;\r\n}\r\n\r\n.process li:nth-child(odd) {\r\n    grid-column: 1;\r\n    transform: translatey(-20px);\r\n}\r\n\r\n.process li:nth-child(odd)::before {\r\n    content: '';\r\n    display: block;\r\n    position: absolute;\r\n    width: 18px;\r\n    height: 2px;\r\n    background-color: var(--color-notice);\r\n    transform: rotate(12deg); \r\n    right: -34px;\r\n    bottom: 15px;\r\n}\r\n\r\n.process li:nth-child(odd)::after {\r\n    content: '';\r\n    display: block;\r\n    position: absolute;\r\n    width: 8px;\r\n    height: 8px;\r\n    border-top: 2px solid var(--color-notice);\r\n    border-right: 2px solid var(--color-notice);\r\n    transform: rotate(60deg);    \r\n    right: -35px;\r\n    bottom: 10px;\r\n}\r\n\r\n.process li:nth-child(even) {\r\n    grid-column: 2;\r\n    transform: translatey(50px);\r\n}\r\n\r\n.process li:nth-child(even)::before {\r\n    content: '';\r\n    display: block;\r\n    position: absolute;\r\n    width: 18px;\r\n    height: 2px;\r\n    background-color: var(--color-notice);\r\n    transform: rotate(-24deg); \r\n    left: -34px;\r\n    bottom: 16px;\r\n}\r\n\r\n.process li:nth-child(even)::after {\r\n    content: '';\r\n    display: block;\r\n    position: absolute;\r\n    width: 8px;\r\n    height: 8px;\r\n    border-top: 2px solid var(--color-notice);\r\n    border-right: 2px solid var(--color-notice);\r\n    transform: rotate(195deg);    \r\n    left: -35px;\r\n    bottom: 10px;\r\n}\r\n\r\n.process li:nth-child(even):last-child::before, .process li:nth-child(even):last-child::after {\r\n    display: none;\r\n}\r\n\r\n.process dt {\r\n    font-weight: bold;\r\n    color: var(--color-point);\r\n}\r\n\r\n.process dd {\r\n    font-size: 0.8rem;\r\n    margin-top: 10px;\r\n}\r\n\r\n.process li:first-child {\r\n    background-color: #ccc;\r\n}\r\n\r\n.process li:first-child dt {\r\n    color: black;\r\n}"],"sourceRoot":""}]);
-// Exports
-___CSS_LOADER_EXPORT___.locals = {
-	"container": `Info_container__Q34iG`,
-	"tit": `Info_tit__XqU37`,
-	"info": `Info_info__HxyzI`,
-	"beforeSunrise": `Info_beforeSunrise__q1YRY`,
-	"riseInfo": `Info_riseInfo__aCx+9`,
-	"process": `Info_process__S-zEX`
-};
-export default ___CSS_LOADER_EXPORT___;
+}

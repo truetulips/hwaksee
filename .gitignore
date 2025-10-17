@@ -4,6 +4,7 @@
 .server_key
 .hwaksee.pub
 .README.md
+.server/ecosystem.config.js
 
 # dependencies
 ./client/node_modules

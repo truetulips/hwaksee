@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-/* 공통 카드 스타일 */
-h2.Posts_tit {
-=======
 @import './default.css';
 
 /* 공통 카드 스타일 */
 h2.tit {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     font-size: 18px;
     background-color: var(--tit-light);
     padding: 5px 20px;
@@ -15,11 +10,7 @@ h2.tit {
     margin: 0.7rem auto;
 }
 
-<<<<<<< HEAD
-.Posts_card {
-=======
 .card {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   position: relative; /* ✅ 삭제 버튼 위치 고정에 필수 */
   padding: 16px;
   border: 1px solid #ccc;
@@ -30,11 +21,7 @@ h2.tit {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-.Posts_input {
-=======
 .input {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: block;
   width: 100%;
   margin-bottom: 12px;
@@ -43,11 +30,7 @@ h2.tit {
   border-radius: 4px;
 }
 
-<<<<<<< HEAD
-.Posts_submit {
-=======
 .submit {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   background: #007bff;
   color: white;
   padding: 10px 16px;
@@ -56,30 +39,18 @@ h2.tit {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-.Posts_imagePreview {
-=======
 .imagePreview {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   margin-bottom: 12px;
   text-align: center;
 }
 
-<<<<<<< HEAD
-.Posts_image {
-=======
 .image {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   max-width: 100%;
   height: auto;
   border-radius: 4px;
 }
 
-<<<<<<< HEAD
-.Posts_noImage {
-=======
 .noImage {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   padding: 20px;
   background: #eee;
   border-radius: 4px;
@@ -87,75 +58,46 @@ h2.tit {
 }
 
 /* 카드 내용 */
-<<<<<<< HEAD
-.Posts_content {
-  flex: 1 1;
-=======
 .content {
   flex: 1;
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-<<<<<<< HEAD
-.Posts_title {
-=======
 .title {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-size: 18px;
   font-weight: bold;
   margin: 0;
 }
 
-<<<<<<< HEAD
-.Posts_description {
-=======
 .description {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-size: 14px;
   color: #555;
   margin: 0;
 }
 
-<<<<<<< HEAD
-.Posts_price {
-=======
 .price {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-size: 15px;
   font-weight: bold;
   color: #333;
 }
 
-<<<<<<< HEAD
-.Posts_link {
-=======
 .link {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-size: 14px;
   color: #007bff;
   text-decoration: none;
 }
 
 /* 버튼 영역 */
-<<<<<<< HEAD
-.Posts_actions {
-=======
 .actions {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: flex;
   gap: 0.7rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
 }
 
-<<<<<<< HEAD
-.Posts_deleteBtn {
-=======
 .deleteBtn {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   padding: 6px 12px;
   background-color: #dc3545;
   color: #fff;
@@ -164,21 +106,13 @@ h2.tit {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-.Posts_matched {
-=======
 .matched {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   color: #28a745;
   font-weight: bold;
 }
 
 /* PostList 그리드 */
-<<<<<<< HEAD
-.Posts_grid {
-=======
 .grid {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
   gap: 10px;
@@ -187,30 +121,18 @@ h2.tit {
   overflow-y: auto;
 }
 
-<<<<<<< HEAD
-.Posts_empty {
-=======
 .empty {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   padding: 40px;
   text-align: center;
   color: #999;
   font-size: 16px;
 }
 
-<<<<<<< HEAD
-.Posts_matchBox {
-  padding: 0.5rem 0.7rem;
-}
-/* MyPosts 등록 버튼 */
-.Posts_registerBtn {
-=======
 .matchBox {
   padding: 0.5rem 0.7rem;
 }
 /* MyPosts 등록 버튼 */
 .registerBtn {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   margin: 0 0.5rem 0.5rem 0.6rem;  
   background-color: #007bff;
   color: white;
@@ -219,32 +141,20 @@ h2.tit {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-.Posts_stats {
-=======
 .stats {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   margin-bottom: 24px;
   background: #f0f8ff;
   padding: 16px;
   border-radius: 8px;
 }
 
-<<<<<<< HEAD
-.Posts_controls {
-=======
 .controls {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: flex;
   gap: 12px;
   margin-bottom: 16px;
 }
 
-<<<<<<< HEAD
-.Posts_deleteButton {
-=======
 .deleteButton {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   position: absolute;
   top: 0;
   right: -8px;
@@ -255,47 +165,27 @@ h2.tit {
   color: #888;
 }
 
-<<<<<<< HEAD
-.Posts_deleteButton:hover {
-  color: var(--color-notice);
-}
-
-.Posts_role {
-=======
 .deleteButton:hover {
   color: var(--color-notice);
 }
 
 .role {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-size: 14px;
   color: #555;
 }
 
-<<<<<<< HEAD
-.Posts_small_noti {
-=======
 .small_noti {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-size: 0.8rem;
   color: var(--color-notice);
   margin: 0.5rem 0 0 0;
 }
 
-<<<<<<< HEAD
-.Posts_small_sub {
-=======
 .small_sub {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-size: 0.8rem;
   margin: 0 0 0.5rem 0;
 }
 
-<<<<<<< HEAD
-.Posts_status {
-=======
 .status {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-size: 13px;
   display: inline-block;
   border: #7a7a7a 1px solid;
@@ -305,11 +195,7 @@ h2.tit {
   margin-top: 13px;
 }
 
-<<<<<<< HEAD
-.Posts_debug {
-=======
 .debug {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   position: absolute;
   top: 8px;
   right: 8px;
@@ -317,11 +203,7 @@ h2.tit {
   color: #ccc;
 }
 
-<<<<<<< HEAD
-.Posts_noticeBox {
-=======
 .noticeBox {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   margin: 2rem 0;
   padding: 0.3rem;
   border: 0.1rem dashed var(--color-notice);
@@ -331,39 +213,23 @@ h2.tit {
   list-style: none;
 }
 
-<<<<<<< HEAD
-.Posts_noticeBox li::before {
-=======
 .noticeBox li::before {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   content: '📌';
   font-size: 12px;
 }
 
-<<<<<<< HEAD
-.Posts_noticeBox .Posts_trans_fn {
-=======
 .noticeBox .trans_fn {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   color:#7a7a7a;
   padding-left: 15px;
 }
 
-<<<<<<< HEAD
-.Posts_notiBank {
-=======
 .notiBank {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   width: 90px;
   display: inline-block;
   vertical-align: middle;
 }
 
-<<<<<<< HEAD
-.Posts_completeBox {
-=======
 .completeBox {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   text-align: center;
   padding: 40px 20px;
   background-color: #f0f9f0;
@@ -371,11 +237,7 @@ h2.tit {
   margin-top: 20px;
 }
 
-<<<<<<< HEAD
-.Posts_backButton {
-=======
 .backButton {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
@@ -386,31 +248,19 @@ h2.tit {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-.Posts_success {
-=======
 .success {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   color: green;
   font-weight: bold;
   margin-top: 8px;
 }
 
-<<<<<<< HEAD
-.Posts_error {
-=======
 .error {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   color: var(--color-notice);
   font-weight: bold;
   margin-top: 8px;
 }
 
-<<<<<<< HEAD
-.Posts_descriptionBox {
-=======
 .descriptionBox {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   margin: 0.5rem 0 0.5rem 1rem;
   padding: 8px;
   background-color: #f9f9f9;
@@ -419,87 +269,44 @@ h2.tit {
 }
 
 /* 리스트 */
-<<<<<<< HEAD
-.Posts_postT {
-=======
 .postT {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   white-space: nowrap;         /* 줄바꿈 없이 한 줄로 */
   overflow: hidden;            /* 넘치는 부분 숨김 */
   text-overflow: ellipsis;     /* 넘치는 텍스트는 ... 처리 */
 }
 
 /* 뷰어 구성 */
-<<<<<<< HEAD
-.Posts_matBox {
-=======
 .matBox {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: flex;
   align-items: center;
   padding: 0;
   gap: 10px;
 }
 
-<<<<<<< HEAD
-.Posts_matBox button {
-  height: fit-content;
-}
-
-.Posts_codeBox {
-=======
 .matBox button {
   height: fit-content;
 }
 
 .codeBox {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   margin: 0.7rem 0;
   width: fit-content;
 }
 
-<<<<<<< HEAD
-.Posts_feeNotice {
-=======
 .feeNotice {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   border-left: 4px solid var(--color-notice);
   padding-left: 7px;
 }
 
-<<<<<<< HEAD
-.Posts_buttom_controll {
-=======
 .buttom_controll {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   margin-top: 20px;
 }
 
 /* ✅ 상태 텍스트 및 색상 결정 */
-<<<<<<< HEAD
-.Posts_status {
-=======
 .status {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-weight: bold;
   margin-top: 8px;
 }
 
-<<<<<<< HEAD
-.Posts_status.Posts_waiting {
-  color: #ab53de;
-}
-
-.Posts_status.Posts_matched {
-  color: #309325;
-}
-
-.Posts_status.Posts_active {
-  color: #309325;
-}
-
-.Posts_status.Posts_done {
-=======
 .status.waiting {
   color: #ab53de;
 }
@@ -513,16 +320,11 @@ h2.tit {
 }
 
 .status.done {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   color: #c48834;
 }
 
 /* 뒤로가기 아이콘 */
-<<<<<<< HEAD
-.Posts_arrowLeft {
-=======
 .arrowLeft {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   color: #fff;
   position: relative;
   margin: 8px 5px 0 0 ;
@@ -531,11 +333,7 @@ h2.tit {
   background-color: currentColor;
 }
 
-<<<<<<< HEAD
-.Posts_arrowLeft:before {
-=======
 .arrowLeft:before {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   content: '';
   position: absolute;
   left: 1px;
@@ -548,11 +346,7 @@ h2.tit {
 }
 
 /* 매칭버튼 */
-<<<<<<< HEAD
-.Posts_matchButton {
-=======
 .matchButton {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   color: #fff;
   position: relative;
   margin-left: 3px;
@@ -563,11 +357,7 @@ h2.tit {
   transform: rotate(-45deg);
 }
 
-<<<<<<< HEAD
-.Posts_matchButton:before {
-=======
 .matchButton:before {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   content: '';
   position: absolute;
   top: -3px;
@@ -578,11 +368,7 @@ h2.tit {
   border: solid 1px currentColor;
 }
 
-<<<<<<< HEAD
-.Posts_matchButton:after {
-=======
 .matchButton:after {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   content: '';
   position: absolute;
   top: -3px;
@@ -593,15 +379,9 @@ h2.tit {
   border: solid 1px currentColor;
 }
 
-<<<<<<< HEAD
-a.Posts_confirmBtn {
-  padding-left: 30px;
-  background: #00de5a url(${___CSS_LOADER_URL_REPLACEMENT_0___}) no-repeat;
-=======
 a.confirmBtn {
   padding-left: 30px;
   background: #00de5a url(../data/img/icon_n.png) no-repeat;
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   background-size: 20px 20px;
   background-position: 8px 6px;
 }

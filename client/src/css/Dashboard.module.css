@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-h2.Dashboard_tit {
-=======
 @import './default.css';
 
 h2.tit {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
     font-size: 18px;
     background-color: var(--tit-light);
     padding: 5px 20px;
@@ -13,21 +9,13 @@ h2.tit {
     margin: 0.7rem auto;
 }
 
-<<<<<<< HEAD
-.Dashboard_dashboard {
-=======
 .dashboard {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   background-color: var(--bg-retro);
   padding: 1rem;
   border-radius: 8px;
 }
 
-<<<<<<< HEAD
-.Dashboard_card {
-=======
 .card {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   background-color: white;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -35,66 +23,38 @@ h2.tit {
   border-radius: 6px;
 }
 
-<<<<<<< HEAD
-.Dashboard_title {
-=======
 .title {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-<<<<<<< HEAD
-.Dashboard_input {
-=======
 .input {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   padding: 8px;
   border: 1px solid var(--hover-retro);
   border-radius: 4px;
 }
 
-<<<<<<< HEAD
-.Dashboard_buttonGroup {
-  margin-top: 0.5rem;
-}
-
-.Dashboard_matchRow {
-=======
 .buttonGroup {
   margin-top: 0.5rem;
 }
 
 .matchRow {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   border-bottom: 1px solid var(--hover-retro);
   padding: 0.5rem 0;
 }
 
-<<<<<<< HEAD
-.Dashboard_success {
-=======
 .success {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   color: green;
   font-weight: bold;
   margin-top: 1rem;
 }
 
-<<<<<<< HEAD
-.Dashboard_statsBox {
-  margin: 30px;
-}
-
-.Dashboard_statsList {
-=======
 .statsBox {
   margin: 30px;
 }
 
 .statsList {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   list-style: none;
   padding-left: 0;
   margin-top: 0.5rem;
@@ -103,20 +63,12 @@ h2.tit {
   gap: 5px 10px;
 }
 
-<<<<<<< HEAD
-.Dashboard_statsList li {
-=======
 .statsList li {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   margin-bottom: 0.4rem;
   font-size: 1rem;
 }
 
-<<<<<<< HEAD
-.Dashboard_filterGroup {
-=======
 .filterGroup {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -124,24 +76,15 @@ h2.tit {
 }
 
 /* list 스타일 */
-<<<<<<< HEAD
-.Dashboard_listContainer {
-=======
 .listContainer {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
 
-<<<<<<< HEAD
-.Dashboard_listRowHeader,
-.Dashboard_listRow {
-=======
 .listRowHeader,
 .listRow {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: grid;
   grid-template-columns: 30px 1.3fr 1fr 1fr;
   align-items: center;
@@ -151,56 +94,32 @@ h2.tit {
   border-radius: 4px;
 }
 
-<<<<<<< HEAD
-.Dashboard_listRowHeader {
-=======
 .listRowHeader {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-weight: bold;
   background-color: var(--hover-retro);
 }
 
-<<<<<<< HEAD
-.Dashboard_clickable {
-=======
 .clickable {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   cursor: pointer;
   color: var(--accent-retro);
   text-decoration: underline;
 }
 
-<<<<<<< HEAD
-.Dashboard_list_title {
-  text-align: center;
-}
-
-.Dashboard_list_tt {
-=======
 .list_title {
   text-align: center;
 }
 
 .list_tt {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-<<<<<<< HEAD
-.Dashboard_list_td {
-  text-align: center;
-}
-
-.Dashboard_pagination {
-=======
 .list_td {
   text-align: center;
 }
 
 .pagination {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   text-align: center;
   margin: 0.5rem 0.2rem 0.2rem;
 }

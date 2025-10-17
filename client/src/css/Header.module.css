@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-.Header_header {
-=======
 @import './default.css';
 
 .header {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   background-color: var(--bg-header);
   font-family: var(--font-retro);
   border-bottom: 2px dashed var(--hover-retro);
@@ -15,11 +11,7 @@
   min-height: 40px;
 }
 
-<<<<<<< HEAD
-.Header_topBar {
-=======
 .topBar {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,35 +19,16 @@
   min-height: 40px;
 }
 
-<<<<<<< HEAD
-button.Header_home {
-  background-color: transparent !important;
-}
-
-.Header_brand {
-=======
 button.home {
   background-color: transparent !important;
 }
 
 .brand {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-size: 16px;
   font-weight: bold;
   color: var(--bg-retro);
 }
 
-<<<<<<< HEAD
-.Header_header a {
-  color: var(--hover-retro);
-}
-
-.Header_header button {
-  margin: 0;
-}
-
-.Header_header a:hover, .Header_header button:hover {
-=======
 .header a {
   color: var(--hover-retro);
 }
@@ -65,16 +38,11 @@ button.home {
 }
 
 .header a:hover, .header button:hover {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   background-color: var(--bg-retro);
   color: var(--bg-header);
 }
 
-<<<<<<< HEAD
-.Header_navBar {
-=======
 .navBar {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   width: 100%;
   overflow: hidden;
   transition: max-height 1s ease-in-out;
@@ -87,38 +55,22 @@ button.home {
   align-items: center;
 }
 
-<<<<<<< HEAD
-.Header_navBar.Header_open__BS6Uh {
-  max-height: 200px;
-}
-
-.Header_navLeft, .Header_navCenter, .Header_navRight {
-=======
 .navBar.open {
   max-height: 200px;
 }
 
 .navLeft, .navCenter, .navRight {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-<<<<<<< HEAD
-.Header_navCenter {
-=======
 .navCenter {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   justify-content: center;
   flex-grow: 1;
 }
 
-<<<<<<< HEAD
-.Header_navBar a {
-=======
 .navBar a {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   text-decoration: none;
   color: var(--accent-retro);
   font-size: 0.9rem;
@@ -128,21 +80,13 @@ button.home {
   transition: background-color 0.3s;
 }
 
-<<<<<<< HEAD
-.Header_navBar a:hover {
-=======
 .navBar a:hover {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   background-color: var(--bg-retro);
   color: #000;
 }
 
 /* home */
-<<<<<<< HEAD
-.Header_homeIcon {
-=======
 .homeIcon {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   position: relative;
   border-style:solid;
   border-color:transparent;
@@ -152,11 +96,7 @@ button.home {
   background:transparent;
 }
 
-<<<<<<< HEAD
-.Header_homeIcon::after {
-=======
 .homeIcon::after {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   content: '';
   position: absolute;
   top: 8px;
@@ -170,11 +110,7 @@ button.home {
 }
 
 /* 유저 icon */
-<<<<<<< HEAD
-.Header_user {
-=======
 .user {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   color: var(--bg-header);
   position: relative;
   margin-left: 5px;
@@ -189,11 +125,7 @@ button.home {
   border-radius: 6px 6px 0 0;
 }
 
-<<<<<<< HEAD
-.Header_user:before {
-=======
 .user:before {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   content: '';
   position: absolute;
   left: 2px;

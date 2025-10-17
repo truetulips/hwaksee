@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-/* 전체 폼 컨테이너 */
-.Form_container {
-=======
 @import './default.css';
 
 /* 전체 폼 컨테이너 */
 .container {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   max-width: var(--wd-mobile);
   margin: 40px auto;
   padding: 24px;
@@ -15,11 +10,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-<<<<<<< HEAD
-.Form_regFormbox {
-=======
 .regFormbox {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   margin: 0.5rem 0.7rem;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -31,11 +22,7 @@
 }
 
 /* 폼 내부 */
-<<<<<<< HEAD
-.Form_form {
-=======
 .form {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   max-width: var(--wd-mobile);
   margin: 0.7rem auto;
   padding: 0.7rem;
@@ -43,16 +30,8 @@
 }
 
 /* 입력 필드 */
-<<<<<<< HEAD
-.Form_input {
-=======
 .input {
-<<<<<<< HEAD
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
-  width: 300px;
-=======
   width: 100%;
->>>>>>> 9e785ec4 (no message)
   padding: 10px 14px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -61,21 +40,13 @@
   margin: auto;
 }
 
-<<<<<<< HEAD
-.Form_input:focus {
-=======
 .input:focus {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   border-color: #007bff;
   outline: none;
 }
 
 /* 제출 버튼 */
-<<<<<<< HEAD
-.Form_submit {
-=======
 .submit {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   padding: 12px;
   background-color: #007bff;
   color: white;
@@ -86,20 +57,12 @@
   transition: background-color 0.2s ease;
 }
 
-<<<<<<< HEAD
-.Form_submit:hover {
-=======
 .submit:hover {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   background-color: #0056b3;
 }
 
 /* 비밀번호 보기 토글 버튼 */
-<<<<<<< HEAD
-.Form_toggle {
-=======
 .toggle {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   background: none;
   border: none;
   color: #007bff;
@@ -110,32 +73,20 @@
 }
 
 /* 에러 메시지 */
-<<<<<<< HEAD
-.Form_error {
-=======
 .error {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   color: #dc3545;
   font-size: 14px;
   margin-top: -8px;
 }
 
 /* 힌트 텍스트 */
-<<<<<<< HEAD
-.Form_hint {
-=======
 .hint {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-size: 13px;
   color: #666;
 }
 
 /* 비밀번호 일치 상태 */
-<<<<<<< HEAD
-.Form_matchStatus {
-=======
 .matchStatus {
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)
   font-size: 14px;
   font-weight: bold;
 }

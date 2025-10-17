@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-const express = require('express');
-const router = express.Router();
-
-router.get('/', async (req, res) => {
-    res.json({ message: 'Posts loaded' });
-});
-
-module.exports = router;
-=======
 import express from 'express';
 import mongoose from 'mongoose';
 import Post from '../models/Post.js';
@@ -318,4 +308,3 @@ router.patch('/:id/settlement', auth, async (req, res) => {
 });
 
 export default router;
->>>>>>> 40c23d38 (Branching point: refs/remotes/origin/main)

@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 dotenv.config({ path: '.env.production' });
 
 const app = express();
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 8001;
 
 // ✅ CORS 제한 (배포용)
 app.use(cors({

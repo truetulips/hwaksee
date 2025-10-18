@@ -1,5 +1,5 @@
-import axios from 'axios';
-import dotenv from 'dotenv';
+const axios = require('axios');
+const dotenv = require('dotenv');
 dotenv.config();
 
 let cachedToken = null;
@@ -28,11 +28,13 @@ async function refreshToken() {
         console.error('❌ 네이버 토큰 갱신 실패:', err.response?.data || err.message);
         return null;
     }
-}
+    }
 
-export async function getAccessToken() {
+    async function getAccessToken() {
     if (isExpired()) {
         return await refreshToken();
     }
     return cachedToken;
 }
+
+module.exports = { getAccessToken };

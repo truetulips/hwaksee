@@ -1,9 +1,8 @@
-// jobs/orderSync.js
-import axios from 'axios';
-import Post from '../models/Post.js';
-import { getAccessToken } from '../utils/naverAuth.js';
+const axios = require('axios');
+const Post = require('../models/Post');
+const { getAccessToken } = require('../utils/naverAuth');
 
-export async function syncNaverOrders() {
+async function syncNaverOrders() {
     const token = await getAccessToken();
     if (!token) {
         console.warn('⚠️ 네이버페이 토큰 없음 → 주문 동기화 중단');
@@ -18,12 +17,12 @@ export async function syncNaverOrders() {
             startDate: get7DaysAgo(),
             endDate: new Date().toISOString()
         }
-        });
+    });
 
-        const orders = res.data.orders || [];
-        console.log(`🔄 주문 동기화 시작: ${orders.length}건`);
+    const orders = res.data.orders || [];
+    console.log(`🔄 주문 동기화 시작: ${orders.length}건`);
 
-        for (const order of orders) {
+    for (const order of orders) {
         const matchCode = extractMatchCode(order.productName);
         if (!matchCode) {
             console.warn(`⚠️ matchCode 추출 실패 → ${order.productName}`);
@@ -68,3 +67,5 @@ function extractMatchCode(name) {
     const match = name.match(/(\d{5}[A-Z])/);
     return match ? match[1] : null;
 }
+
+module.exports = { syncNaverOrders };

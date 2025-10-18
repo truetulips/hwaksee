@@ -1,4 +1,3 @@
-// src/data/couriers.js
 export const courierList = [
   { code: '04', name: 'CJ대한통운' },
   { code: '05', name: '한진택배' },

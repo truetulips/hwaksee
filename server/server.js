@@ -1,19 +1,18 @@
-// server.js
-import express from 'express';
-import cors from 'cors';
-import mongoose from 'mongoose';
-import dotenvFlow from 'dotenv-flow';
-import cron from 'node-cron';
+const express = require('express');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const dotenvFlow = require('dotenv-flow');
+const cron = require('node-cron');
 
 // 🧹 자동 정리 작업
-import { cleanInactiveUsers } from './jobs/cleanup.js';
+const { cleanInactiveUsers } = require('./jobs/cleanup');
 
 // 📁 라우트 모듈
-import authRoutes from './routes/authRoutes.js';
-import postRoutes from './routes/posts.js';
-import adminRoutes from './routes/admin.js';
-import adminStatsRoutes from './routes/adminStats.js';
-import userRoutes from './routes/user.js';
+const authRoutes = require('./routes/authRoutes');
+const postRoutes = require('./routes/posts');
+const adminRoutes = require('./routes/admin');
+const adminStatsRoutes = require('./routes/adminStats');
+const userRoutes = require('./routes/user');
 
 dotenvFlow.config(); // NODE_ENV에 따라 자동 분기
 

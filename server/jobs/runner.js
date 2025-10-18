@@ -1,8 +1,7 @@
-// jobs/runner.js
-import cron from 'node-cron';
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-import { syncNaverOrders } from '../jobs/orderSync.js';
+const cron = require('node-cron');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+const { syncNaverOrders } = require('../jobs/orderSync');
 
 dotenv.config();
 
@@ -18,9 +17,9 @@ async function ensureMongoConnection() {
         console.error('❌ MongoDB 연결 실패:', err.message);
         }
     }
-}
+    }
 
-cron.schedule('*/10 * * * *', async () => {
+    cron.schedule('*/10 * * * *', async () => {
     console.log('⏰ [CRON] 네이버 주문 동기화 시작');
     try {
         await ensureMongoConnection();

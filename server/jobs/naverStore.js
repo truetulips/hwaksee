@@ -1,10 +1,10 @@
-import axios from 'axios';
+const axios = require('axios');
 
 // 네이버페이 API 연동을 위한 createSmartstoreProduct() 함수
-export async function createSmartstoreProduct({ title, price, matchCode }) {
+async function createSmartstoreProduct({ maskedPhone, title, price }) {
     try {
         const payload = {
-        productName: `[확씨] ${title} (${matchCode})`,
+        productName: `[확씨 ${maskedPhone}] ${title}`,
         salePrice: price,
         saleStatus: 'ONSALE',
         stockQuantity: 1,
@@ -39,3 +39,5 @@ export async function createSmartstoreProduct({ title, price, matchCode }) {
         throw new Error('스마트스토어 상품 등록 중 오류가 발생했습니다.');
     }
 }
+
+module.exports = { createSmartstoreProduct };

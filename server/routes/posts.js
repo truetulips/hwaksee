@@ -1,9 +1,9 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import Post from '../models/Post.js';
-import User from '../models/User.js';
-import auth from '../middleware/auth.js';
-import { createSmartstoreProduct } from '../jobs/naverStore.js';
+const express = require('express');
+const mongoose = require('mongoose');
+const Post = require('../models/Post');
+const User = require('../models/User');
+const auth = require('../middleware/auth');
+const { createSmartstoreProduct } = require('../jobs/naverStore');
 
 const router = express.Router();
 
@@ -307,4 +307,4 @@ router.patch('/:id/settlement', auth, async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;

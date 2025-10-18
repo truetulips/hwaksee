@@ -1,1 +1,1 @@
-const app = require('./server/server.prod');
+require('./server/server.prod.js');

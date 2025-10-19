@@ -4,13 +4,13 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
-// 🌐 환경변수 로딩 (Cafe24는 .env 하나로 통일 권장)
+// 🌐 환경변수 로딩 (.env 하나로 통일 권장)
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 const app = express();
 const PORT = process.env.PORT || 8001;
 
-// ✅ CORS 제한 (배포용)
+// ✅ CORS 설정 (배포용)
 app.use(cors({
   origin: process.env.ALLOWED_ORIGIN?.split(','),
   credentials: true
@@ -25,17 +25,18 @@ if (!process.env.MONGO_URI) {
 }
 
 mongoose.connect(process.env.MONGO_URI, {
-  dbName: process.env.DB_NAME, // .env에 DB_NAME=test 등 명시
+  dbName: process.env.DB_NAME,
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
   .then(() => {
     console.log('✅ MongoDB 연결 성공');
 
-    // ✅ 모델 초기화 (연결 이후)
+    // ✅ 모델 초기화
     require('./models/User');
 
-    // ✅ API 라우터 연결
+    // ✅ API 라우터 등록 (정적 파일 서빙보다 먼저)
+    app.use('/tracking', require('./routes/tracking')); // 🆕 배송 추적 라우터
     app.use('/api/auth', require('./routes/authRoutes'));
     app.use('/api/posts', require('./routes/posts'));
     app.use('/api/user', require('./routes/user'));
@@ -44,6 +45,8 @@ mongoose.connect(process.env.MONGO_URI, {
 
     // ✅ React 정적 파일 서빙
     app.use(express.static(path.join(__dirname, '../client/build')));
+
+    // ✅ SPA fallback
     app.get('*', (req, res) => {
       res.sendFile(path.join(__dirname, '../client/build/index.html'));
     });

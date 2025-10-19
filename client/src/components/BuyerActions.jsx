@@ -33,11 +33,28 @@ export default function BuyerActions({ post, updatePost }) {
   const handleFinalize = () => updatePost({ buyerStatus: '완료' });
 
   // ✅ 배송 추적
+  // const fetchTracking = async () => {
+  //   try {
+  //     const res = await fetch(`/tracking?code=${shipping.courier}&invoice=${shipping.tracking}`);
+  //     const data = await res.json();
+  //     setTrackingInfo(data);
+  //   } catch (err) {
+  //     alert('배송 추적 실패: ' + (err.message || 'API 오류'));
+  //   }
+  // };
   const fetchTracking = async () => {
     try {
       const res = await fetch(`/tracking?code=${shipping.courier}&invoice=${shipping.tracking}`);
-      const data = await res.json();
-      setTrackingInfo(data);
+      const text = await res.text(); // 👈 JSON 대신 text로 받아보기
+      console.log('📦 배송 응답 원문:', text);
+
+      try {
+        const data = JSON.parse(text);
+        setTrackingInfo(data);
+      } catch (parseErr) {
+        console.error('❌ JSON 파싱 실패:', parseErr.message);
+        alert('배송 응답이 JSON이 아닙니다.');
+      }
     } catch (err) {
       alert('배송 추적 실패: ' + (err.message || 'API 오류'));
     }

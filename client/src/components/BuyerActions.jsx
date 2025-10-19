@@ -15,7 +15,6 @@ export default function BuyerActions({ post, updatePost }) {
 
   const [showTrackingModal, setShowTrackingModal] = useState(false);
 
-  // 상태 분기
   const canRequestDeposit = !buyerStatus || buyerStatus === '진행 전';
   const isWaitingForInspection =
     ['입금확인', '물품확인'].includes(buyerStatus) && inspectionResult === null;
@@ -25,7 +24,6 @@ export default function BuyerActions({ post, updatePost }) {
     buyerStatus === '출고' && shipping?.courier && shipping?.tracking;
   const canFinalize = buyerStatus === '출고';
 
-  // 액션 핸들러
   const handleDepositRequest = () => {
     if (!paymentMethod) {
       alert('결제 방식을 선택해주세요.');
@@ -63,14 +61,8 @@ export default function BuyerActions({ post, updatePost }) {
                 </span>{' '}
                 이현
               </p>
-              <p
-                style={{
-                  color: '#d65c5cff',
-                  marginLeft: '16px',
-                  marginBottom: '5px',
-                }}
-              >
-                <span style={{ fontSize: '12px' }}>📌</span>입금 후 "입금완료"를 꼭 눌러주세요!
+              <p className={styles.small_noti}>
+                <span style={{ fontSize: '12px' }}>📌</span> 입금 후 "입금완료"를 꼭 눌러주세요!
               </p>
               <button onClick={handleDepositRequest} className={styles.confirmBtn}>
                 입금완료
@@ -99,9 +91,7 @@ export default function BuyerActions({ post, updatePost }) {
       {/* 검사 결과 기반 구매 결정 */}
       {canDecisionOnInspection && (
         <div className={styles.notice}>
-          <p>
-            🔍 관리자 검사 결과: <strong>{inspectionResult}</strong>
-          </p>
+          <p>🔍 관리자 검사 결과: <strong>{inspectionResult}</strong></p>
           {inspectionDescription && (
             <p className={styles.descriptionBox}>
               <strong>설명:</strong> {inspectionDescription} <br />

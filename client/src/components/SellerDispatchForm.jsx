@@ -23,9 +23,12 @@ export default function SellerDispatchForm({ post, updatePost }) {
 
   const canInputShipping = sellerStatus === '진행 전';
   const canModifyShipping = sellerStatus === '발송';
-  const isWaitingForInspection = ['입고', '물품확인'].includes(sellerStatus) && inspectionResult === null;
-  const canSubmitAccount = sellerStatus === '물품확인' && inspectionResult === '정상' && !isAccountSubmitted;
-  const canSubmitErr = sellerStatus === '물품확인' && inspectionResult === '이상' && !isAccountSubmitted;
+  const isWaitingForInspection =
+    ['입고', '물품확인'].includes(sellerStatus) && inspectionResult === null;
+  const canSubmitAccount =
+    sellerStatus === '물품확인' && inspectionResult === '정상' && !isAccountSubmitted;
+  const canSubmitErr =
+    sellerStatus === '물품확인' && inspectionResult === '이상' && !isAccountSubmitted;
   const canFinalize = sellerStatus === '정산';
 
   const handleDispatch = async () => {

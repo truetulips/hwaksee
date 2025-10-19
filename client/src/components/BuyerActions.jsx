@@ -15,6 +15,7 @@ export default function BuyerActions({ post, updatePost }) {
 
   const [showTrackingModal, setShowTrackingModal] = useState(false);
 
+  // 상태 분기
   const canRequestDeposit = !buyerStatus || buyerStatus === '진행 전';
   const isWaitingForInspection =
     ['입금확인', '물품확인'].includes(buyerStatus) && inspectionResult === null;
@@ -24,6 +25,7 @@ export default function BuyerActions({ post, updatePost }) {
     buyerStatus === '출고' && shipping?.courier && shipping?.tracking;
   const canFinalize = buyerStatus === '출고';
 
+  // 액션 핸들러
   const handleDepositRequest = () => {
     if (!paymentMethod) {
       alert('결제 방식을 선택해주세요.');

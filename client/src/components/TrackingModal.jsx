@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import styles from '../css/Form.module.css';
-import axios from '../api/axios'; // 또는 fetch 사용 가능
 
 export default function TrackingModal({ courier, tracking, onClose }) {
     const [status, setStatus] = useState(null);
@@ -9,10 +8,15 @@ export default function TrackingModal({ courier, tracking, onClose }) {
     useEffect(() => {
         const fetchStatus = async () => {
         try {
-            const res = await axios.get(
-            `https://api.sweettracker.co.kr/api/v1/trackingInfo?t_code=${courier}&t_invoice=${tracking}&apiKey=YOUR_API_KEY`
+            const res = await fetch(
+            `https://info.sweettracker.co.kr/api/v1/trackingInfo?t_key=${process.env.REACT_APP_SWEETTRACKER_API_KEY}&t_code=${courier}&t_invoice=${tracking}`
             );
-            setStatus(res.data);
+            const data = await res.json();
+            if (data.status) {
+            setStatus(data);
+            } else {
+            setError('배송 정보를 불러올 수 없습니다.');
+            }
         } catch (err) {
             setError('배송 정보를 불러올 수 없습니다.');
         }
@@ -26,7 +30,9 @@ export default function TrackingModal({ courier, tracking, onClose }) {
         <div className={styles.modal}>
             <button onClick={onClose} className={styles.closeBtn}>✖</button>
             <h4>📦 배송 추적</h4>
+
             {error && <p className={styles.error}>{error}</p>}
+
             {status ? (
             <div className={styles.statusBox}>
                 <p>🚚 택배사: {status.courierName}</p>

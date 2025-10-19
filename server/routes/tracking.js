@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 
-router.get('/tracking', async (req, res) => {
+router.get('/', async (req, res) => {
   const { code, invoice } = req.query;
   const apiKey = process.env.SWEETTRACKER_API_KEY;
 

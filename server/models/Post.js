@@ -48,7 +48,7 @@ const postSchema = new mongoose.Schema({
     matcherRole: {
         type: String,
         enum: ['buyer', 'seller'],
-        default: null
+        required: true
     },
 
   // 📦 거래 상태

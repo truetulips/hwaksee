@@ -149,12 +149,22 @@ router.patch('/:id', auth, async (req, res) => {
       title: isAuthor || isAdmin,
       price: isAuthor || isAdmin,
       link: isAuthor || isAdmin,
-      smartstoreProductId: isAuthor || isAdmin // ✅ 추가
+      smartstoreProductId: isAuthor || isAdmin
     };
 
     for (const key of Object.keys(patch)) {
       if (key in permissionMap && !permissionMap[key]) {
         return res.status(403).json({ message: `${key} 수정 권한이 없습니다.` });
+      }
+    }
+
+    // ✅ inspectionResult 유효성 검사
+    const allowedResults = ['확인전', '정상', '이상'];
+    if ('inspectionResult' in patch) {
+      if (patch.inspectionResult === null) {
+        delete patch.inspectionResult;
+      } else if (!allowedResults.includes(patch.inspectionResult)) {
+        return res.status(400).json({ message: '유효하지 않은 검사 결과입니다.' });
       }
     }
 
@@ -176,6 +186,31 @@ router.patch('/:id', auth, async (req, res) => {
     res.json(post);
   } catch (err) {
     handleError(res, err, '수정 실패');
+  }
+});
+
+// 🧪 검사 결과 입력
+router.post('/:id/inspection', auth, async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    if (!post) return res.status(404).json({ message: '글을 찾을 수 없습니다.' });
+    if (req.user.role !== 'admin') return res.status(403).json({ message: '검사 결과 입력 권한이 없습니다.' });
+
+    const allowedResults = ['확인전', '정상', '이상'];
+    const result = req.body.result;
+
+    if (!allowedResults.includes(result)) {
+      return res.status(400).json({ message: '유효하지 않은 검사 결과입니다.' });
+    }
+
+    post.inspectionResult = result;
+    post.buyerStatus = '물품확인';
+    post.sellerStatus = '물품확인';
+
+    await post.save();
+    res.json({ message: '검사 결과 저장 완료', post });
+  } catch (err) {
+    handleError(res, err, '검사 결과 저장 실패');
   }
 });
 

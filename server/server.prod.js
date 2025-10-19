@@ -36,7 +36,6 @@ mongoose.connect(process.env.MONGO_URI, {
     require('./models/User');
 
     // ✅ API 라우터 등록 (정적 파일 서빙보다 먼저)
-    app.use('/tracking', require('./routes/tracking')); // 🆕 배송 추적 라우터
     app.use('/api/auth', require('./routes/authRoutes'));
     app.use('/api/posts', require('./routes/posts'));
     app.use('/api/user', require('./routes/user'));

@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
 // 🌐 환경변수 로딩 (Cafe24는 .env 하나로 통일 권장)
-dotenv.config(); // .env 또는 .env.production 자동 인식
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 const app = express();
 const PORT = process.env.PORT || 8001;

@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.1074d149.css",
-    "main.js": "/static/js/main.6fe2fab0.js",
+    "main.js": "/static/js/main.27e05d78.js",
     "static/media/bi.png": "/static/media/bi.2f4f2eaf0eb17490df5b.png",
     "static/media/toss-bank.png": "/static/media/toss-bank.2a5c1965aad5e21f1738.png",
     "index.html": "/index.html",
     "main.1074d149.css.map": "/static/css/main.1074d149.css.map",
-    "main.6fe2fab0.js.map": "/static/js/main.6fe2fab0.js.map"
+    "main.27e05d78.js.map": "/static/js/main.27e05d78.js.map"
   },
   "entrypoints": [
     "static/css/main.1074d149.css",
-    "static/js/main.6fe2fab0.js"
+    "static/js/main.27e05d78.js"
   ]
 }

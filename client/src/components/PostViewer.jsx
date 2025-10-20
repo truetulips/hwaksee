@@ -115,12 +115,15 @@ export default function PostViewer({ userRole, currentUserId }) {
           )}
 
           {canCopyMatchCode && (
-            <button
-              onClick={() => {
-                navigator.clipboard.writeText(post.matchCode);
-                alert('📋 매칭 코드가 복사되었습니다');
+            <button className={styles.copyBtn} onClick={() => {
+                if (navigator?.clipboard?.writeText) {
+                  navigator.clipboard.writeText(post.matchCode)
+                  .then(() => alert('📋 매칭코드가 복사되었습니다'))
+                  .catch(() => alert('❌ 복사에 실패했습니다'));
+                } else {
+                  alert('❌ 이 브라우저에서는 복사 기능을 지원하지 않습니다');
+                }
               }}
-              className={styles.copyBtn}
             >
               📋 코드 복사
             </button>

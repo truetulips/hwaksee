@@ -47,21 +47,22 @@ export default function BuyerActions({ post, updatePost }) {
         <>
           {paymentMethod === 'cash' && (
             <div className={styles.notice}>
-              <p>
+              <p onClick={() => {
+                  if (navigator?.clipboard?.writeText) {
+                    navigator.clipboard.writeText('100041715312')
+                      .then(() => alert('📋 입금계좌가 복사되었습니다'))
+                      .catch(() => alert('❌ 복사에 실패했습니다'));
+                  } else {
+                    alert('❌ 이 브라우저에서는 복사 기능을 지원하지 않습니다');
+                  }
+                }}   
+              >
                 <img
                   src={imageLibrary.find((img) => img.id === 2).src}
                   alt={imageLibrary.find((img) => img.id === 2).alt}
                   className={styles.notiBank}
                 />
-                <span
-                  onClick={() => {
-                    navigator.clipboard.writeText('100041715312');
-                    alert('📋 입금계좌가 복사되었습니다');
-                  }}
-                >
-                  1000-4171-5312
-                </span>{' '}
-                이현
+                <span>1000-4171-5312</span> 이현
               </p>
               <p className={styles.small_noti}>
                 <span style={{ fontSize: '12px' }}>📌</span> 입금 후 "입금완료"를 꼭 눌러주세요!

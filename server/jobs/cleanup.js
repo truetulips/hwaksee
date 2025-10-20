@@ -45,7 +45,6 @@ const cleanInactiveUsers = async () => {
     let deletedCount = 0;
 
     for (const user of candidates) {
-      // const postCount = await Post.countDocuments({ userId: user._id });
       const postCount = await Post.countDocuments({ author: user._id });
       if (postCount === 0) {
         await User.deleteOne({ _id: user._id });

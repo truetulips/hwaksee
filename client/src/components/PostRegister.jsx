@@ -36,9 +36,7 @@ export default function PostRegister({ onPostCreated, onCancel }) {
       const matchCode = generateMatchCode();
       const summary = getFeeSummary({ price, feeResponsibility, paymentMethod });
 
-      const res = await axios.post(
-        '/posts',
-        {
+      const res = await axios.post('/posts', {
           type,
           matcherRole: type, // ✅ 역할을 명시적으로 전달
           title,

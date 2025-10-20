@@ -45,6 +45,7 @@ router.post('/', auth, async (req, res) => {
       price,
       link,
       type,
+      matcherRole: type,
       matchCode,
       author: req.user._id,
       feeResponsibility: feeResponsibility || 'buyer',

@@ -6,6 +6,7 @@ const ITEMS_PER_PAGE = 20;
 
 export default function UserList({ isAdmin }) {
   const [users, setUsers] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -30,14 +31,28 @@ export default function UserList({ isAdmin }) {
     fetchUsers();
   }, []);
 
-  const paginated = Array.isArray(users)
-    ? users.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
+  const filteredUsers = users.filter((user) =>
+    formatPhone(user.phone).includes(searchTerm)
+  );
+
+  const paginated = Array.isArray(filteredUsers)
+    ? filteredUsers.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
     : [];
 
   return (
     <div className={styles.card}>
       <div className={styles.listHeader}>
         <h3>사용자 리스트</h3>
+        <input
+          type="text"
+          placeholder="전화번호 끝자리로 검색"
+          value={searchTerm}
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+            setCurrentPage(1);
+          }}
+          className={styles.searchInput}
+        />
       </div>
 
       {loading ? (
@@ -50,7 +65,7 @@ export default function UserList({ isAdmin }) {
         <>
           <div className={styles.listContainer}>
             <div className={styles.listRowHeader}>
-              <div></div>
+              <div></div>  {/* 칸 맞춤 공백 */}
               <div className={styles.list_tt}>ID</div>
               <div className={styles.list_td}>활동일</div>
               <div className={styles.list_td}>작성글 수</div>
@@ -58,6 +73,7 @@ export default function UserList({ isAdmin }) {
 
             {paginated.map((user) => (
               <div key={user._id} className={styles.listRow}>
+                <div></div>
                 <div className={styles.list_tt}>{formatPhone(user.phone)}</div>
                 <div className={styles.list_td}>
                   {user.inactiveSince
@@ -69,9 +85,9 @@ export default function UserList({ isAdmin }) {
             ))}
           </div>
 
-          {users.length > ITEMS_PER_PAGE && (
+          {filteredUsers.length > ITEMS_PER_PAGE && (
             <div className={styles.pagination}>
-              {Array.from({ length: Math.ceil(users.length / ITEMS_PER_PAGE) }, (_, i) => (
+              {Array.from({ length: Math.ceil(filteredUsers.length / ITEMS_PER_PAGE) }, (_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrentPage(i + 1)}

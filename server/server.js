@@ -10,7 +10,7 @@ const { cleanInactiveUsers } = require('./jobs/cleanup');
 
 const allowedOrigins = [
   'http://localhost:3000',
-  'http://172.30.1.52:3000',
+  'http://172.30.1.6:3000',
   'https://hwaksee.kr'
 ];
 

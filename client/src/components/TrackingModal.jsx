@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
+import { courierList } from '../data/couriers';
 import styles from '../css/Form.module.css';
 
 export default function TrackingModal({ courier, tracking, onClose }) {
     const [status, setStatus] = useState(null);
     const [error, setError] = useState(null);
+
+    const courierName = courierList.find(c => c.code === courier)?.name || '알 수 없음';
 
     useEffect(() => {
         const fetchStatus = async () => {
@@ -48,7 +51,7 @@ export default function TrackingModal({ courier, tracking, onClose }) {
 
             {status && (
             <div className={styles.statusBox}>
-                {/* <p>택배사: {status.courierName}</p> */}
+                <p>택배사: {courierName}</p>
                 <p>송장번호: {status.invoiceNo}</p>
                 <p>배송물품: {status.itemName}</p>
                 {status.lastDetail && (

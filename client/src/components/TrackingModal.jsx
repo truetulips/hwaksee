@@ -19,11 +19,12 @@ export default function TrackingModal({ courier, tracking, onClose }) {
             `https://info.sweettracker.co.kr/api/v1/trackingInfo?t_key=${apiKey}&t_code=${courier}&t_invoice=${tracking}`
             );
             const data = await res.json();
+            console.log('📦 SweetTracker 응답:', data);
 
-            if (data.status && data.invoiceNo) {
+            if (data.invoiceNo && data.lastDetail) {
             setStatus(data);
             } else {
-            setError('배송 정보를 찾을 수 없습니다.');
+            setError(data.msg || '배송 정보를 찾을 수 없습니다.');
             }
         } catch (err) {
             setError('배송 정보를 불러오는 중 오류가 발생했습니다.');
@@ -36,7 +37,7 @@ export default function TrackingModal({ courier, tracking, onClose }) {
     return (
         <div className={styles.overlay}>
         <div className={styles.modal}>
-            <button onClick={onClose} className={styles.closeBtn}>✖</button>
+            <button onClick={onClose} className={styles.closeBtn}>❌</button>
             <h4>📦 배송 추적</h4>
 
             {error && <p className={styles.error}>{error}</p>}
@@ -47,10 +48,16 @@ export default function TrackingModal({ courier, tracking, onClose }) {
 
             {status && (
             <div className={styles.statusBox}>
-                <p>🚚 택배사: {status.courierName}</p>
-                <p>📄 송장번호: {status.invoiceNo}</p>
-                <p>📍 현재 상태: <strong>{status.status}</strong></p>
-                <p>🕒 최근 위치: {status.lastDetail?.location} ({status.lastDetail?.time})</p>
+                {/* <p>택배사: {status.courierName}</p> */}
+                <p>송장번호: {status.invoiceNo}</p>
+                <p>배송물품: {status.itemName}</p>
+                {status.lastDetail && (
+                <div className={styles.trackdetail}>
+                    <p>최근 위치: {status.lastDetail.where}</p>
+                    <p>처리 내용: {status.lastDetail.kind}</p>
+                    <p>처리 시각: {status.lastDetail.timeString}</p>
+                </div>
+                )}
             </div>
             )}
         </div>

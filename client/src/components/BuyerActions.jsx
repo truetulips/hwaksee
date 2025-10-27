@@ -49,7 +49,7 @@ export default function BuyerActions({ post, updatePost }) {
             <div className={styles.notice}>
               <p onClick={() => {
                   if (navigator?.clipboard?.writeText) {
-                    navigator.clipboard.writeText('100041715312')
+                    navigator.clipboard.writeText('100225784244')
                       .then(() => alert('📋 입금계좌가 복사되었습니다'))
                       .catch(() => alert('❌ 복사에 실패했습니다'));
                   } else {
@@ -62,7 +62,7 @@ export default function BuyerActions({ post, updatePost }) {
                   alt={imageLibrary.find((img) => img.id === 2).alt}
                   className={styles.notiBank}
                 />
-                <span>1000-4171-5312</span> 이현
+                <span>1002-2578-4244</span> 이현
               </p>
               <p className={styles.small_noti}>
                 <span style={{ fontSize: '12px' }}>📌</span> 입금 후 "입금완료"를 꼭 눌러주세요!

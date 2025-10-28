@@ -16,7 +16,7 @@ export default function UserList() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await axios.get('/api/user', {
+        const res = await axios.get('/user/', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
 

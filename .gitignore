@@ -3,12 +3,18 @@
 .README.md
 
 # dependencies
+client
 ./client
+client/node_modules
 ./client/node_modules
+server/node_modules
 ./server/node_modules
 
 # misc
+.env
+client/.env
 .DS_Store
+server/.env
 ./server/.env
 
 npm-debug.log*

@@ -22,7 +22,7 @@ router.post('/', auth, async (req, res) => {
     title, price, link, type, matchCode,
     feeResponsibility, paymentMethod,
     buyerAmount, sellerAmount, totalAmount, feeAmount,
-    smartstoreProductId // ✅ 추가 필드
+    smartstoreProductId
   } = req.body;
 
   const user = await User.findById(req.user._id);
@@ -54,17 +54,12 @@ router.post('/', auth, async (req, res) => {
       sellerAmount,
       totalAmount,
       feeAmount,
-      smartstoreProductId, // ✅ 반영
+      smartstoreProductId,
       status: '등록'
     });
 
-    // ✅ 전자결제일 경우 스마트스토어 상품 자동 등록
     if (paymentMethod === 'pay') {
-      const productId = await createSmartstoreProduct({
-        title,
-        price,
-        matchCode
-      });
+      const productId = await createSmartstoreProduct({ title, price, matchCode });
       newPost.smartstoreProductId = productId;
     }
 
@@ -150,7 +145,9 @@ router.patch('/:id', auth, async (req, res) => {
       title: isAuthor || isAdmin,
       price: isAuthor || isAdmin,
       link: isAuthor || isAdmin,
-      smartstoreProductId: isAuthor || isAdmin
+      smartstoreProductId: isAuthor || isAdmin,
+      buyerInfo: isAdmin || isBuyer,
+      cancelReason: isAdmin || isBuyer
     };
 
     for (const key of Object.keys(patch)) {
@@ -159,7 +156,6 @@ router.patch('/:id', auth, async (req, res) => {
       }
     }
 
-    // ✅ inspectionResult 유효성 검사
     const allowedResults = ['확인전', '정상', '이상'];
     if ('inspectionResult' in patch) {
       if (patch.inspectionResult === null) {
@@ -187,31 +183,6 @@ router.patch('/:id', auth, async (req, res) => {
     res.json(post);
   } catch (err) {
     handleError(res, err, '수정 실패');
-  }
-});
-
-// 🧪 검사 결과 입력
-router.post('/:id/inspection', auth, async (req, res) => {
-  try {
-    const post = await Post.findById(req.params.id);
-    if (!post) return res.status(404).json({ message: '글을 찾을 수 없습니다.' });
-    if (req.user.role !== 'admin') return res.status(403).json({ message: '검사 결과 입력 권한이 없습니다.' });
-
-    const allowedResults = ['확인전', '정상', '이상'];
-    const result = req.body.result;
-
-    if (!allowedResults.includes(result)) {
-      return res.status(400).json({ message: '유효하지 않은 검사 결과입니다.' });
-    }
-
-    post.inspectionResult = result;
-    post.buyerStatus = '물품확인';
-    post.sellerStatus = '물품확인';
-
-    await post.save();
-    res.json({ message: '검사 결과 저장 완료', post });
-  } catch (err) {
-    handleError(res, err, '검사 결과 저장 실패');
   }
 });
 
@@ -245,40 +216,21 @@ router.post('/:id/inspection', auth, async (req, res) => {
     if (!post) return res.status(404).json({ message: '글을 찾을 수 없습니다.' });
     if (req.user.role !== 'admin') return res.status(403).json({ message: '검사 결과 입력 권한이 없습니다.' });
 
-    post.inspectionResult = req.body.result;
-    post.buyerStatus = '물품확인';
-    post.sellerStatus = '물품확인';
+    const allowedResults = ['확인전', '정상', '이상'];
+    const result = req.body.result;
+
+    if (!allowedResults.includes(result)) {
+      return res.status(400).json({ message: '유효하지 않은 검사 결과입니다.' });
+    }
+
+    post.inspectionResult = result;
+    post.buyerStatus = '물품확인중';
+    post.sellerStatus = '물품확인중';
 
     await post.save();
     res.json({ message: '검사 결과 저장 완료', post });
   } catch (err) {
     handleError(res, err, '검사 결과 저장 실패');
-  }
-});
-
-// 🛒 구매자 의사 전달
-router.post('/:id/buyer-decision', auth, async (req, res) => {
-  const { decision } = req.body;
-  try {
-    const post = await Post.findById(req.params.id);
-    if (!post) return res.status(404).json({ message: '글을 찾을 수 없습니다.' });
-
-    const isBuyer = post.matcher?.equals(req.user._id) && post.matcherRole === 'buyer';
-    if (!isBuyer) return res.status(403).json({ message: '구매자만 의사 전달이 가능합니다.' });
-
-    if (post.buyerStatus !== '물품확인') {
-      return res.status(400).json({ message: '물품확인 단계에서만 구매/취소 선택이 가능합니다.' });
-    }
-
-    if (!['구매', '취소'].includes(decision)) {
-      return res.status(400).json({ message: '유효하지 않은 선택입니다.' });
-    }
-
-    post.buyerStatus = decision;
-    await post.save();
-    res.json({ message: '구매자 의사 반영 완료', post });
-  } catch (err) {
-    handleError(res, err, '구매자 의사 반영 실패');
   }
 });
 
@@ -289,7 +241,8 @@ router.post('/:id/shipping', auth, async (req, res) => {
     const post = await Post.findById(req.params.id);
     if (!post) return res.status(404).json({ message: '글을 찾을 수 없습니다.' });
 
-    if (req.user.role !== 'admin') {
+    const isAdmin = req.user.role === 'admin';
+    if (!isAdmin) {
       return res.status(403).json({ message: '출고 처리 권한이 없습니다.' });
     }
 

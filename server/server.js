@@ -50,10 +50,10 @@ function startServer() {
       app.use('/api/admin/stats', require('./routes/adminStats'));
 
       // 정적 파일 서빙 경로 수정
-      app.use(express.static('/var/www/hwaksee'));
+      app.use(express.static('/var/www/hwaksee/build'));
 
       app.get('*', (req, res) => {
-        res.sendFile(path.join('/var/www/hwaksee', 'index.html'));
+        res.sendFile(path.join('/var/www/hwaksee/build', 'index.html'));
       });
 
       app.listen(PORT, () => {

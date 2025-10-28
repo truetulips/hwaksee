@@ -4,7 +4,7 @@ import styles from '../css/Dashboard.module.css';
 
 const ITEMS_PER_PAGE = 20;
 
-export default function UserList({ isAdmin }) {
+export default function UserList() {
   const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,10 +16,15 @@ export default function UserList({ isAdmin }) {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await axios.get('/users', {
+        const res = await axios.get('/api/user', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
-        setUsers(res.data);
+
+        if (Array.isArray(res.data)) {
+          setUsers(res.data);
+        } else {
+          setError(res.data.message || '사용자 정보를 불러올 수 없습니다.');
+        }
       } catch (err) {
         console.error('사용자 불러오기 실패:', err);
         setError('사용자 정보를 불러올 수 없습니다.');
@@ -35,9 +40,10 @@ export default function UserList({ isAdmin }) {
     formatPhone(user.phone).includes(searchTerm)
   );
 
-  const paginated = Array.isArray(filteredUsers)
-    ? filteredUsers.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
-    : [];
+  const paginated = filteredUsers.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
 
   return (
     <div className={styles.card}>
@@ -58,14 +64,14 @@ export default function UserList({ isAdmin }) {
       {loading ? (
         <p>⏳ 사용자 정보를 불러오는 중입니다...</p>
       ) : error ? (
-        <p className={styles.error}>{error}</p>
+        <p className={styles.error}>⚠️ {error}</p>
       ) : paginated.length === 0 ? (
         <p>📭 사용자 정보가 없습니다.</p>
       ) : (
         <>
           <div className={styles.listContainer}>
             <div className={styles.listRowHeader}>
-              <div></div>  {/* 칸 맞춤 공백 */}
+              <div></div>
               <div className={styles.list_tt}>ID</div>
               <div className={styles.list_td}>활동일</div>
               <div className={styles.list_td}>작성글 수</div>
@@ -87,15 +93,18 @@ export default function UserList({ isAdmin }) {
 
           {filteredUsers.length > ITEMS_PER_PAGE && (
             <div className={styles.pagination}>
-              {Array.from({ length: Math.ceil(filteredUsers.length / ITEMS_PER_PAGE) }, (_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentPage(i + 1)}
-                  className={currentPage === i + 1 ? styles.activePage : ''}
-                >
-                  {i + 1}
-                </button>
-              ))}
+              {Array.from(
+                { length: Math.ceil(filteredUsers.length / ITEMS_PER_PAGE) },
+                (_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentPage(i + 1)}
+                    className={currentPage === i + 1 ? styles.activePage : ''}
+                  >
+                    {i + 1}
+                  </button>
+                )
+              )}
             </div>
           )}
         </>

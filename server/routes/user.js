@@ -38,7 +38,7 @@ router.get('/', authMiddleware, async (req, res) => {
     const usersWithPostCount = await Promise.all(users.map(async user => {
       const postCount = await Post.countDocuments({ author: user._id.toString() }); // 문자열 기반 매칭
       return {
-        _id: { $oid: user._id.toString() },
+        _id: user._id.toString(), // ✅ 문자열로 바로 반환
         phone: user.phone,
         inactiveSince: user.inactiveSince,
         role: user.role,

@@ -99,6 +99,10 @@ h2.tit {
   background-color: var(--hover-retro);
 }
 
+.listRow:hover {
+  background-color: var(--bg-retro);
+}
+
 .clickable {
   cursor: pointer;
   color: var(--accent-retro);

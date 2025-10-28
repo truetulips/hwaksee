@@ -1,22 +1,18 @@
 const express = require('express');
+const path = require('path');
 const cors = require('cors');
+const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const dotenvFlow = require('dotenv-flow');
 const cron = require('node-cron');
-
-dotenvFlow.config();
 
 const { cleanInactiveUsers } = require('./jobs/cleanup');
 
-const allowedOrigins = [
-  'http://localhost:3000',
-  'http://172.30.1.6:3000',
-  'https://hwaksee.kr'
-];
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 const app = express();
+const PORT = process.env.PORT || 3000;
+const allowedOrigins = process.env.ALLOWED_ORIGIN?.split(',') || ['https://hwaksee.kr'];
 
-// ✅ CORS 설정
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
@@ -31,53 +27,53 @@ app.use(cors({
 
 app.use(express.json());
 
-// ✅ 파피콘 정상인데 자꾸 불러?!
-app.get('/favicon.ico', (req, res) => res.status(204).end());
-
-// ✅ 기본 API 응답 (Nginx 프록시 확인용)
-app.get('/api', (req, res) => {
-  res.json({ message: 'API 연결 성공!' });
-});
-
-const PORT = process.env.PORT || 5000;
-
-// ✅ MongoDB 연결
-mongoose.connect(process.env.MONGO_URI, {
-  dbName: process.env.DB_NAME,
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-  .then(() => {
-    console.log('✅ MongoDB 연결 완료');
-
-    // ✅ 모델 초기화
-    require('./models/User');
-
-    // ✅ 라우터 등록
-    const authRoutes = require('./routes/authRoutes');
-    const postRoutes = require('./routes/posts');
-    const adminRoutes = require('./routes/admin');
-    const adminStatsRoutes = require('./routes/adminStats');
-    const userRoutes = require('./routes/user');
-
-    app.use('/auth', authRoutes);
-    app.use('/posts', postRoutes);
-    app.use('/admin', adminRoutes);
-    app.use('/admin/stats', adminStatsRoutes);
-    app.use('/users', userRoutes);
-
-    // ✅ 서버 시작
-    app.listen(PORT, () => {
-      console.log(`✅ Server running at http://localhost:${PORT} (${process.env.NODE_ENV || 'development'})`);
-    });
-
-    // ✅ 크론 작업
-    cron.schedule('0 7 * * *', async () => {
-      console.log('🧹 Running daily cleanup job (inactive users)...');
-      await cleanInactiveUsers();
-    });
-  })
-  .catch(err => {
-    console.error('❌ DB 연결 실패:', err.message);
+function startServer() {
+  if (!process.env.MONGO_URI || !process.env.DB_NAME) {
+    console.error('❌ 환경변수 MONGO_URI 또는 DB_NAME 누락됨');
     process.exit(1);
-  });
+  }
+
+  mongoose.connect(process.env.MONGO_URI, {
+    dbName: process.env.DB_NAME,
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+    .then(() => {
+      console.log('✅ MongoDB 연결 완료');
+
+      require('./models/User');
+
+      app.use('/api/auth', require('./routes/authRoutes'));
+      app.use('/api/posts', require('./routes/posts'));
+      app.use('/api/user', require('./routes/user'));
+      app.use('/api/admin', require('./routes/admin'));
+      app.use('/api/admin/stats', require('./routes/adminStats'));
+
+      app.use(express.static(path.join(__dirname, '../client/build')));
+
+      app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '../client/build/index.html'));
+      });
+
+      app.listen(PORT, () => {
+        console.log(`🚀 확씨 운영 서버 실행 중: http://localhost:${PORT}`);
+      });
+
+      cron.schedule('0 7 * * *', () => {
+        console.log('🧹 Running daily cleanup job (inactive users)...');
+        cleanInactiveUsers()
+          .then(() => {
+            console.log('✅ 크론 작업 완료');
+          })
+          .catch((err) => {
+            console.error('❌ 크론 작업 실패:', err.message);
+          });
+      });
+    })
+    .catch((err) => {
+      console.error('❌ MongoDB 연결 실패:', err.message);
+      process.exit(1);
+    });
+}
+
+startServer();

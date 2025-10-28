@@ -20,7 +20,7 @@ export default function MyPosts({ user }) {
         headers: { Authorization: `Bearer ${token}` }
       });
 
-      const allPosts = res.data;
+      const allPosts = Array.isArray(res.data) ? res.data : res.data.posts ?? [];
 
       const myPosts = allPosts.filter(post =>
         post.author === user._id ||

@@ -69,31 +69,32 @@ const runCleanup = async () => {
   console.log('🏁 [정리 작업 완료]');
 };
 
-// 🔹 자동 실행: 매일 오전 7시 (서버에서 import된 경우에만 작동)
+// 🔹 자동 실행: 매일 오전 7시
 if (process.env.NODE_ENV !== 'test') {
-  cron.schedule('0 7 * * *', async () => {
+  cron.schedule('0 7 * * *', () => {
     console.log('⏰ [CRON] 오전 7시 자동 클린업 시작');
-    try {
-      if (mongoose.connection.readyState === 0) {
-        await mongoose.connect(process.env.MONGO_URI);
-      }
-      await runCleanup();
-    } catch (err) {
-      console.error('❌ [CRON] 클린업 실패:', err.message);
-    }
+    const connectIfNeeded = mongoose.connection.readyState === 0
+      ? mongoose.connect(process.env.MONGO_URI)
+      : Promise.resolve();
+
+    connectIfNeeded
+      .then(() => runCleanup())
+      .catch((err) => {
+        console.error('❌ [CRON] 클린업 실패:', err.message);
+      });
   });
 }
 
 // 🔹 수동 실행
 if (require.main === module) {
   mongoose.connect(process.env.MONGO_URI)
-    .then(async () => {
+    .then(() => {
       console.log('✅ [수동] DB 연결 성공');
-      await runCleanup();
-      mongoose.disconnect();
+      return runCleanup();
     })
+    .then(() => mongoose.disconnect())
     .catch((err) => {
-      console.error('❌ [수동] DB 연결 실패:', err.message);
+      console.error('❌ [수동] 실행 실패:', err.message);
     });
 }
 

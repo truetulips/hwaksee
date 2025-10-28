@@ -49,10 +49,11 @@ function startServer() {
       app.use('/api/admin', require('./routes/admin'));
       app.use('/api/admin/stats', require('./routes/adminStats'));
 
-      app.use(express.static(path.join(__dirname, '../client/build')));
+      // 정적 파일 서빙 경로 수정
+      app.use(express.static('/var/www/hwaksee'));
 
       app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, '../client/build/index.html'));
+        res.sendFile(path.join('/var/www/hwaksee', 'index.html'));
       });
 
       app.listen(PORT, () => {

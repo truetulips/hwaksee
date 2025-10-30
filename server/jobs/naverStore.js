@@ -86,19 +86,19 @@ async function createSmartstoreProduct({ title, buyerAmount }) {
     const originProduct = {
       statusType: "SALE",
       saleType: "OLD",
-      leafCategoryId: "50000345", // 생활용품
+      leafCategoryId: "50000345",
       name: `[확씨] ${title}`,
-      detailContent: "<center><img src='http://truetulips.mycafe24.com/img/bi.png' width='500' height=auto />확씨의 전자결제 선택 시 등록되는 물품입니다. <br />거래 물품의 상세한 정보는 확씨의 링크 등록 을 반드시 확인 해주시기 바랍니다.</center>",
+      detailContent: "<center><img src='http://truetulips.mycafe24.com/img/bi.png' width='500' height=auto /><br />확씨의 전자결제 선택 시 등록되는 물품입니다.<br />거래 물품의 상세한 정보는 확씨의 링크 등록 을 반드시 확인 해주시기 바랍니다.</center>",
       images: {
         representativeImage: { url: imageUrl },
         optionalImages: []
       },
-      salePrice: buyerAmount, // ✅ 구매자 결제 금액
+      salePrice: buyerAmount,
       stockQuantity: 1,
       deliveryInfo: {
         deliveryType: "DELIVERY",
         deliveryAttributeType: "NORMAL",
-        logisticsCompanyId: "EPOST", // ✅ 계약된 택배사 코드
+        logisticsCompanyId: "EPOST",
         deliveryCompany: "EPOST",
         deliveryChargeType: "FREE",
         deliveryCharge: 0,
@@ -139,7 +139,7 @@ async function createSmartstoreProduct({ title, buyerAmount }) {
             caution: "세탁 시 주의",
             warrantyPolicy: "소비자분쟁해결기준에 따름",
             afterServiceDirector: "고객센터",
-            packDate: packDate // ✅ 자동 날짜 삽입
+            packDate
           }
         }
       }
@@ -169,8 +169,18 @@ async function createSmartstoreProduct({ title, buyerAmount }) {
       }
     );
 
-    console.log('✅ [상품 등록 성공]', res.data.productNo);
-    return res.data.productNo;
+    const result = res.data;
+    const smartstoreChannelProductNo = result?.smartstoreChannelProductNo;
+
+    console.log("✅ 상품 등록 성공!");
+    console.log("채널상품번호:", smartstoreChannelProductNo);
+
+    if (!smartstoreChannelProductNo) {
+      console.error("❌ 채널상품번호 누락:", result);
+      throw new Error("상품 등록 응답에 smartstoreChannelProductNo가 없습니다.");
+    }
+
+    return { smartstoreChannelProductNo };
   } catch (err) {
     const status = err.response?.status;
     const invalids = err.response?.data?.invalidInputs;

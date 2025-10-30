@@ -22,7 +22,7 @@ router.post('/', auth, async (req, res) => {
     title, price, link, type, matchCode,
     feeResponsibility, paymentMethod,
     buyerAmount, sellerAmount, totalAmount, feeAmount,
-    smartstoreProductId
+    smartstoreChannelProductNo,
   } = req.body;
 
   const user = await User.findById(req.user._id);
@@ -54,13 +54,13 @@ router.post('/', auth, async (req, res) => {
       sellerAmount,
       totalAmount,
       feeAmount,
-      smartstoreProductId,
+      smartstoreChannelProductNo,
       status: '등록'
     });
 
     if (paymentMethod === 'pay') {
-      const productId = await createSmartstoreProduct({ title, buyerAmount, matchCode });
-      newPost.smartstoreProductId = productId;
+      const { smartstoreChannelProductNo } = await createSmartstoreProduct({ title, buyerAmount, matchCode });
+      newPost.smartstoreChannelProductNo = String(smartstoreChannelProductNo);
     }
 
     await newPost.save();

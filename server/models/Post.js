@@ -23,8 +23,12 @@ const postSchema = new mongoose.Schema({
     enum: ['pay', 'cash'],
     default: 'cash'
   },
-  smartstoreProductId: {
+  smartstoreChannelProductNo: {
     type: String,
+    default: null
+  },
+  paymentConfirmedAt: {
+    type: Date,
     default: null
   },
 

@@ -59,7 +59,7 @@ router.post('/', auth, async (req, res) => {
     });
 
     if (paymentMethod === 'pay') {
-      const productId = await createSmartstoreProduct({ title, price, matchCode });
+      const productId = await createSmartstoreProduct({ title, buyerAmount, matchCode });
       newPost.smartstoreProductId = productId;
     }
 

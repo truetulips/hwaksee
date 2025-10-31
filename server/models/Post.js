@@ -24,7 +24,7 @@ const postSchema = new mongoose.Schema({
     default: 'cash'
   },
   smartstoreChannelProductNo: {
-    type: String,
+    type: Number,
     default: null
   },
   paymentConfirmedAt: {

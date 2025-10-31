@@ -76,19 +76,23 @@ async function uploadProductImage(accessToken) {
 }
 
 // 📦 상품 등록
-async function createSmartstoreProduct({ title, buyerAmount }) {
+async function createSmartstoreProduct({ title, buyerAmount, matchCode, phone }) {
   try {
     const accessToken = await getAccessToken();
     const imageUrl = await uploadProductImage(accessToken);
     const today = new Date();
     const packDate = today.toISOString().slice(0, 7); // "YYYY-MM"
+    const sellId = typeof phone === 'string' && phone.length >= 4
+      ? phone.slice(-4)
+      : '0000';
+    const channelProductName = `[확씨 ${sellId} 안전거래] ${title}`;
 
     const originProduct = {
       statusType: "SALE",
       saleType: "OLD",
       leafCategoryId: "50000345",
       name: `[확씨] ${title}`,
-      detailContent: "<center><img src='http://truetulips.mycafe24.com/img/bi.png' width='500' height=auto /><br />확씨의 전자결제 선택 시 등록되는 물품입니다.<br />거래 물품의 상세한 정보는 확씨의 링크 등록 을 반드시 확인 해주시기 바랍니다.</center>",
+      detailContent: "<center><img src='https://truetulips.mycafe24.com/img/bi.png' width='500' height=auto /><br />확씨의 전자결제 선택 시 등록되는 물품입니다.<br />거래 물품의 상세한 정보는 확씨의 링크 등록 을 반드시 확인 해주시기 바랍니다.<br /><img src='https://truetulips.mycafe24.com/img/hwaksee_cut.png' /></center>",
       images: {
         representativeImage: { url: imageUrl },
         optionalImages: []
@@ -146,7 +150,7 @@ async function createSmartstoreProduct({ title, buyerAmount }) {
     };
 
     const smartstoreChannelProduct = {
-      channelProductName: title,
+      channelProductName,
       bbsSeq: null,
       storeKeepExclusiveProduct: false,
       naverShoppingRegistration: true,

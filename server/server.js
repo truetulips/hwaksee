@@ -27,6 +27,12 @@ app.use(cors({
 
 app.use(express.json());
 
+// 특정 도메인만 허용
+app.use(cors({
+  origin: 'http://119.204.207.123:3000',
+  credentials: true,
+}));
+
 function startServer() {
   if (!process.env.MONGO_URI || !process.env.DB_NAME) {
     console.error('❌ 환경변수 MONGO_URI 또는 DB_NAME 누락됨');

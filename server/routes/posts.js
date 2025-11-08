@@ -61,8 +61,8 @@ router.post('/', auth, async (req, res) => {
     if (paymentMethod === 'pay') {
       const { smartstoreChannelProductNo } = await createSmartstoreProduct({
         title,
-        buyerAmount,
-        phone: user.phone        
+        buyerAmount,  
+        matchCode    
       });
       newPost.smartstoreChannelProductNo = Number(smartstoreChannelProductNo);
     }

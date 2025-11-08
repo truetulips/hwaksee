@@ -76,16 +76,13 @@ async function uploadProductImage(accessToken) {
 }
 
 // 📦 상품 등록
-async function createSmartstoreProduct({ title, buyerAmount, matchCode, phone }) {
+async function createSmartstoreProduct({ title, buyerAmount, matchCode }) {
   try {
     const accessToken = await getAccessToken();
     const imageUrl = await uploadProductImage(accessToken);
     const today = new Date();
     const packDate = today.toISOString().slice(0, 7); // "YYYY-MM"
-    const sellId = typeof phone === 'string' && phone.length >= 4
-      ? phone.slice(-4)
-      : '0000';
-    const channelProductName = `[확씨 ${sellId} 안전거래] ${title}`;
+    const channelProductName = `[확씨 ${matchCode} 안전거래] ${title}`;
 
     const originProduct = {
       statusType: "SALE",
